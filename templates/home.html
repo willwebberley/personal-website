@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% for post in posts %}
+{% autoescape false %}
+<article>
+    <div class="date"><p>{{ post.day }}/{{ post.month }}/{{ post.year }}
+    <a href="/post/{{ post.year }}/{{ post.month }}/{{ post.day }}">permalink</a></p></div>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+    <div style="clear:both"></div>
+</article>
+{% endautoescape %}
+{% endfor %}
+
+{% endblock %}

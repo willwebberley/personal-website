@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>FTS - Retweets and stuff</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+	<script src="jquery.js"></script>
+	<script src="easing.js"></script>
+	<script src="color.js"></script>
+</head>
+
+<body>
+<header>
+	<img src="media/logo.png" alt="Twitter Logo" id="logo" />
+	<div id="author">
+		<p>
+			@flyingSparx
+		</p>
+		<p>
+			Cardiff School of Computer Science and Informatics
+		</p>
+	</div>
+</header>
+
+<div id="progress"></div>
+<div id="progress-value">Blah</div>
+
+<div id="presentation">
+
+	<section class="slide" id="welcome">
+		<h1>Retweets and stuff</h1>
+		<h2>Will Webberley</h2>
+		<h3>September 10th, 2012</h3>
+	</section>
+	
+	<section class="slide" id="introduction">
+		<h1>The talk</h1>
+		<ul>
+			<li>Brief introduction</li>
+			<li>Recent work</li>
+			<li>What results mean</li>
+			<li>Where next?</li>
+		</ul>
+	</section>
+	
+	<section class="slide" id="retweeting">
+		<img src="media/retweet.jpg" class="main-image"/>
+		<h1>Retweeting</h1>
+		<ul>
+			<li>Forwarding on of information</li>
+			<li>Drastically increases audience size of a tweet</li>
+			<li>Seen as a way of promoting or voting for information</li>
+			<li>Typically a measure of information quality</li>
+		</ul>
+	</section>
+	
+	<section class="slide" id="recently">
+		<h1>Recent questions</h1>
+		<ul>
+			<li>Interested in propagation characteristics in different network structures</li>
+			<li>Does a network (as well as a tweet) have a quality?</li>
+			<li>Can we calculate a network's quality from the retweet characteristics?</li>
+		</ul>
+		<br /><br />
+		<ul>
+			<li>Can we then use this to reverse engineer a <strong>tweet's</strong> quality?</li>
+		</ul>
+	</section>
+	
+	<section class="slide" id="comapring-networks">
+		<h1>Comparing network types</h1>
+		<h2>First thing to find...</h2>
+		<p>Does the network structure affect propagation?</p>
+		<br /><br /><br />
+		<h2>How to check this?</h2>
+		<p>Use a model to simulate tweet propagation in a network</p>
+		<br /><br /><br />
+		<h2>Simulate 3 different network types</h2>
+		<p>And hopefully get different results from each using the same tweet</p>
+	</section>
+	
+	<section class="slide" id="linear-network">
+		<h1>Linear network</h1>
+		<img src="media/linear-net.png" style="min-width:500px;" />
+	</section>
+	
+	<section class="slide" id="random-network">
+		<h1>Random network</h1>
+		<img src="media/random-net.png" style="min-width:500px;" />
+		<br /><br />
+		<ul>
+			<li>Many avenues for propagation</li>
+			<li>All users have around the same in- and out-degree</li>
+		</ul>
+	</section>
+	
+	<section class="slide" id="scale-free-network">
+		<h1>Scale-free network</h1>
+		<img src="media/scalefree-net.png" style="min-width:500px;" />
+		<br /><br />
+		<ul>
+			<li>Some dense clusters of users</li>
+			<li>Only some users have good links to external communities</li>
+		</ul>
+	</section>
+	
+	<section class="slide" id="model">
+		<h1>Model</h1>
+		<ul>
+			<li><label>Inputs:</label>
+				<ul>
+					<li>Network</li>
+					<li>Trained regression</li>
+					<li>Tweet</li>
+				</ul>
+			</li>
+			<li><label>Output:</label>
+				<ul>
+					<li>Set of retweeters</li>
+				</ul>
+			</li>
+			<li><label>Retweet volume:</label>cardinality of output set</li>
+			<li><label>Retweet audience:</label>sum of followers of output set</li>
+		</ul>
+		<br /><br />
+		<h2>Training the model...</h2>
+		<p>Model trained using set of <strong>tweet</strong> and <strong>user</strong> features</p>
+	</section>
+	
+	<section class="slide" id="features">
+		<h1>Feature examples</h1>
+		<ul>
+			<li><label>Follow</label>
+				<img src="media/following.png" class="list-image"/>
+			</li>
+			<hr />
+			<li><label>Followed</label>
+				<img src="media/followed.png" class="list-image" />
+			</li>
+			<hr />
+			<li><label>URL</label>
+				<img src="media/url.png" class="list-image"/>
+			</li>
+			<hr />
+			<li><label>Mentioned</label>
+				<img src="media/mentioned.png" class="list-image" />
+			</li>
+		</ul>
+	</section>
+	
+	<section class="slide" id="data">
+		<h1>Data for this experiment</h1>
+		<ul>
+			<li>Twitter walk using REST API between March-June 2012</li>
+			<li>~15,000 (usable) retweets collected</li>
+			<li>User and tweet features extracted from this</li>
+		</ul>
+	</section>
+	
+	<section class="slide" id="timeline">
+		<h1>Tweet timeline</h1>
+			<img src="media/timeline.png" class="main-image"/>
+		<ul style="width:300px">
+			<li>Tweets below view-window less likely to be seen</li>
+			<li>If browsing quickly, then less likely to scroll down far</li>
+			<li>Interesting tweets may be missed</li>
+		</ul>
+		<br />
+		<h2>How to include this?</h2>
+		<ul style="width:300px">
+			<li>Remove non-retweeted tweets from the user's timeline after <i>t</i> timesteps</li>
+	</section>
+	
+	<section class="slide" id="overview">
+		<h1>Simulation overview</h1>
+			<img src="media/overview.png"/>
+	</section>
+	
+	<section class="slide" id="linear-result">
+		<h1>Linear network</h1>
+			<img src="media/linear-result.png" style="min-width:500px;" />
+	</section>
+		
+	<section class="slide" id="random-result">
+		<h1>Random network</h1>
+			<img src="media/random-result.png" style="min-width:500px;" />
+	</section>
+	
+	<section class="slide" id="scalefree-result">
+		<h1>Scale-Free network</h1>
+			<img src="media/scalefree-result.png" style="min-width:500px;" />
+	</section>
+	
+	<section class="slide" id="comparison-result">
+		<h1>Comparison to real Twitter data</h1>
+			<img src="media/comparison-result.png" style="min-width:500px;" />
+	</section>
+		
+	<section class="slide" id="precision-recall">
+		<h1>Precision and recall</h1>
+		<img src="media/precision.png" class="list-image"/>
+		<img src="media/recall.png" class="list-image"/>
+		<br /><br /><br />
+		<ul>
+			<li>For a best experience, maximise both</li>
+			<li>Random network may <strong>increase recall</strong>, but 
+			<strong>reduces precision</strong></li>
+			<br /><br />
+			<li>In practice, hard to maximise recall</li>
+		</ul>
+	</section>
+	
+	<section class="slide" id="summary1">
+		<h1>Summary of this</h1>
+		<ul>
+			<li>Different networks have different propagation characteristics</li>
+			<li>Therefore, there <strong>must</strong> be an optimal structure</li>
+			<li>Scale-free most Twitter-like in terms of propagation</li>
+		</ul>
+		<br /><br /><br />
+		<ul>
+			<li><strong>How do we get interesting content to the right people?</strong></li>
+		</ul>
+	</section>
+	
+	<section class="slide" id="now">
+		<h1>Coming up</h1>
+		<ul>
+			<li>Work out the interesting tweets using the model outputs</li>
+			<li>If we know how much a tweet is predicted to spread 
+			(based on features), we can tell if it is actually interesting or not</li>
+		</ul>
+		<br /><br />
+		<h2>For example...</h2>
+		<ul>
+			<li>A tweet (with its features) has been predicted
+				to be retweeted 6 times...</li>
+			<li>It is actually retweeted 15 times</li>
+			<li>This tweet is therefore significantly <strong>interesting</strong></li>
+		</ul>
+	</section>
+	
+	<section class="slide" id="abovebelow-result">
+		<h1>For example...</h1>
+			<img src="media/abovebelow-result.png" style="min-width:500px;" />
+	</section>
+	
+	<section class="slide" id="issues">
+		<h1>Issues with this</h1>
+		<ul>
+			<li>Deciding on how to <i>measure</i> a network (size, density, etc.)</li>
+			<li>Scaling the network measurement to the user's local network</li>
+			<li>Deciding on a threshold to determine (un)interesting-ness</li>
+		</ul>
+	</section>
+	
+	<section class="slide" id="conclusion">
+		<h1>Conclusion</h1>
+		<ul>
+			<li>Wanted to find how non-tweet factors affect propagation</li>
+			<li>Discovered that network structure has large impact on this</li>
+			<li>Can we now determine a tweet's interesting-ness based on this?</li>
+		</ul>
+	</section>
+	
+	<section class="slide" id="end">
+		<h1>The end</h1>
+		<br /><br />
+		<h2>Any questions or comments?</h2>
+		<br /><br />
+		<p>except Quinn</p>
+	</section>
+</div>
+
+<footer> 
+	<h3>Slides</h3>
+	<nav>
+	</nav>
+</footer>
+
+
+<script>
+
+var progress = 0;
+var progressStep = 0;
+var numSlides = 0;
+var currentSlide = 0;
+
+function showSlide(slide){
+	var previous = $(".selected");
+	if (previous.length > 0){
+		previous.removeClass("selected");
+		previous.animate({left: '-1000px'}, 400, "easeOutQuint", function(){});
+	}
+	
+	slide.addClass("selected");
+	var id = slide.attr("id");
+	window.location = "#"+id;
+	var counter = 0;
+	$("#presentation").children(".slide").each(function () {
+		counter+= 1;
+		if($(this).attr("id") == id){
+			currentSlide = counter;
+			progress = counter * progressStep;
+			return false;
+		}
+	});
+	slide.animate({top: '0px', left:'0px'}, 400, "easeOutQuint", function(){});
+	slide.addClass("selected");
+	$("#progress").animate({width: progress+'%'},800, "easeOutBounce", function(){});
+	var valueLeftNess = progress-3;
+	$("#progress-value").animate({left: valueLeftNess+'%'},400, "easeOutQuint", function(){});
+	$("#progress-value").html(Math.round(progress) + "%");
+}
+
+$(document).ready(function(){
+	var requested = window.location.hash;
+	var slideToShow;
+	if($(requested).length == 0){
+		slideToShow = $("#presentation").children(":first");
+	}
+	else{
+		slideToShow = $(requested);
+	}
+	$("#presentation").children(".slide").each(function () {
+		numSlides += 1;
+		var id = $(this).attr("id");
+		$("footer nav").append('<a href="#'+id+'">'+id+'</a> ');
+	});
+	progress = (1 / numSlides) * 100;
+	progressStep = (1 / numSlides) * 100;
+	showSlide(slideToShow);
+	
+	$("footer nav a").click(function(){
+		var id = $(this).attr('href');
+		showSlide($(id));
+	});
+	$("footer").mouseenter(function(){
+		$("footer").animate({'background-color': '#00BFFF'},700);
+		$("footer nav").show(300, function(){});
+	});
+	$("footer").mouseleave(function(){
+		$("footer").animate({'background-color': 'rgba(250, 250, 250, 0.3);'},700);
+		$("footer nav").hide(300, function(){});
+	});
+});
+
+$(document).keyup(function(e){
+	if (e.keyCode == 37) { 
+		if(currentSlide > 1){
+			var current = $(".selected");
+			var next = current.prev();
+			progress -= progressStep;
+			
+			showSlide(next);
+			
+		}
+	}
+    if (e.keyCode == 39) { 
+    	if(currentSlide < numSlides){
+			var current = $(".selected");
+			var next = current.next();   
+			progress += progressStep;   
+			current.removeClass("selected");
+			current.animate({left: '-1000px'}, 400, "easeOutQuint", function(){});
+			showSlide(next);
+		}
+    }	     
+});
+</script>
+
+</body>
+</html>

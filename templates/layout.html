@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Will Webberley - computer science PhD student at Cardiff University">
+    <meta name="author" content="Will Webberley">
+	
+    <title>flyingsparx</title>
+	
+    <link rel="icon" type="image/png" href="/static/media/favicon.png">
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
+    {% if mobile == True %}
+    <link rel="stylesheet" type="text/css"  href="/static/css/mobile.css" />
+    {% endif %}
+    <script type="text/javascript" src="/static/js/jquery.js"></script>		
+</head>
+
+<body>
+
+<header>
+	<div id="profile">
+        <img src="http://www.flyingsparx.net/static/media/will.jpg" alt="Will" />
+        <p><a href="/">Will Webberley</a></p>
+        <p>Computer science PhD student in Cardiff - internet/mobile/social computing enthusiast</p>
+    </div>
+    
+    <nav>
+        <a href="/research" class="fader">research</a>
+        <a href="/outputs" class="fader">outputs</a>
+        <a href="/teaching" class="fader">teaching</a>
+        <a href="/contact" class="fader">contact</a>
+    </nav>
+</header>
+
+
+<div id="main">	
+    <div id="wrapper">
+        {% block body %}
+
+        {% endblock %}
+    </div>
+</div>
+
+<footer>
+    <a href="http://www.twitter.com/flyingSparx" target="_blank">
+        <img src="/static/media/twitter.png" class="social" alt="Twitter" />
+    </a>
+    <a href="https://plus.google.com/117295241444122869150" target="_blank">
+        <img src="/static/media/google.png" class="social" alt="Google Plus" />
+    </a>
+    <a href="http://www.last.fm/user/flyingsparks" target="_blank">
+        <img src="/static/media/lastfm.png" class="social" alt="Last FM" />
+    </a>
+    <a href="http://www.github.com/flyingsparx" target="_blank">
+        <img src="/static/media/github.png"  class="bg social" alt="Github" />
+    </a>
+    <a href="http://www.foursquare.com/flyingsparx" target="_blank">
+        <img src="/static/media/foursquare.png" class="social" alt="Foursqaure" />
+    </a>
+    <!--
+    <a href="http://www.facebook.com/flyingSparx" target="_blank">
+        <img src="/static/media/fb.png" class="social" alt="Facebook" />
+    </a>-->
+</footer>
+	
+<script type="text/javascript" src="/static/js/easing.js"></script>
+<script type="text/javascript" src="/static/js/color.js"></script>
+<script type="text/javascript">
+function loadBindings(){
+    $(".social").hover(function(){
+        $(this).stop().animate({opacity:'1.0'},300);
+    },function(){
+        $(this).stop().animate({opacity:'0.3'},300);
+    });
+
+}
+
+function handleWindowResize(){
+    if ($(window).width() < 700){
+        $("section.small").css({'width':'100%'});
+        $("header").css({'padding':'10px 0px','position':'relative','width':'100%','height':'auto','clear':'both'});
+        $("#main").css({'margin':'10px auto', 'width':'90%'});
+        $("footer").css({'position':'absolute','top':'10px','left':'10px','width':'50px'});
+    }
+    else{
+        var smallSectWidth = ($(window).width() - 330)/2 - 20;
+        $("section.small").css({'width':'45%'}); 
+        $("header").css({'padding':'0px','position':'fixed','top':'0px','width':'300px','height':'100%'});
+        $("#main").css({'margin-left':'330px', 'margin-top':'0px', 'margin-right':'30px','width':'auto'});
+        $("footer").css({'position':'fixed','bottom':'20px','top':'auto','left':'15px','width':'280px'});
+    }
+}
+
+$(window).resize(function(){
+    {% if mobile == False %}
+    handleWindowResize();
+    {% endif %}
+});
+
+$(document).ready(function(){
+    loadBindings();
+});
+</script>
+</body>
+</html>
