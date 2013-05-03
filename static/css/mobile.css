@@ -1,5 +1,14 @@
 section.small{
     width:100%;
+    margin:20px 0px;
+}
+section.small:nth-of-type(2){
+    margin:20px 0px;
+}
+section{
+    width:100%;
+    padding-bottom;15px;
+    border-bottom:1px solid #bbb;
 }
 header{
     padding:10px 0px;
@@ -16,10 +25,12 @@ header{
     font-size:17px;
 }
 nav{
-    width:80%;
+    width:90%;
+    text-align:center;
 }
 nav a{
     font-size:30px;
+    width:auto;
 }
 
 #main{
@@ -31,4 +42,9 @@ footer{
     top:10px;
     left:10px;
     width:50px;
+}
+
+.thumb{
+    width:100%;
+    margin:10px 0px;
 }

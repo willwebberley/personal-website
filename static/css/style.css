@@ -46,15 +46,20 @@ section.main{
 }
 
 section.small{
-    margin:30px 3px;
+    margin:30px 0px;
     width:45%;
     float:left;
+}
+
+section.small:nth-of-type(2){
+    margin-left:4%;
 }
 
 h1{
     color:#00BFFF;
     margin-bottom:20px;
     font-size:50px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 h2{
@@ -62,6 +67,7 @@ h2{
     margin-top:25px;
     margin-bottom:15px;
     font-size:30px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 h3{
@@ -191,17 +197,98 @@ nav{
     padding:10px;
     border-radius:20px;
     margin:10px auto;
-    text-align:center;
+}
+
+nav .command{
+    font-family: 'Courier New', 'Courier', 'monospace';
+    color:#bbb;
+    font-size:12px;
+    text-align:left;
+    margin:5px 5px;
 }
 
 nav a{
     font-size:13px;
     display:inline-block;
-    margin:10px;
+    min-width:60px;
+    margin:3px;
+    text-align:left;
+    padding:5px;
+    border-radius:4px;
 }
 nav a:link{color:white;text-decoration:none;}
 nav a:visited{color:white;text-decoration:none;}
-nav a:hover{color:#00BFFF;}
+nav a:hover{color:white;}
+
+nav a.active{
+    color:#00BFFF;
+}
+
+#lastfm{
+    display:none;
+    display:block;
+    width:80%;
+    background: url('/static/media/listening.png') rgba(0,0,0,0.1);
+    background-repeat:no-repeat;
+    background-size:25px auto;
+    background-position:200px 8px;
+    border-radius:20px;
+    margin:20px auto;
+    margin-bottom:0px;
+    padding-bottom:5px;
+    overflow:hidden;
+}
+
+#lastfm #songs .song{
+    width:96%;
+    margin:5px 0px;
+    padding-bottom:8px;
+    padding-top:5px;
+    padding-left:2%;
+    padding-right:2%;
+    border-bottom:1px solid rgba(250,250,250,0.1);
+    cursor:pointer;
+}
+
+#lastfm #songs .song.now-playing{
+    padding-left:10%;
+    width:68%;
+    background:url('http://cdn.last.fm/flatness/global/icon_eq.gif') rgba(250,250,250,0.1);;
+    background-repeat:no-repeat;
+    background-position:5px center;
+    border:none;
+    padding-top:5px;
+    margin-top:0px;
+    border-radius:20px 20px 0px 0px;
+}
+
+#lastfm #songs .song.not-now-playing:hover{
+   background:rgba(250,250,250,0.2);
+    border-bottom:1px solid rgba(250,250,250,0.0);
+}
+
+#lastfm #songs .song .title{
+    color:#00BFFF;
+    font-size:10px;
+    line-height:16px;
+    display:block;
+    clear:both;
+}
+
+#lastfm #songs .song .artist{
+    color:#bbb;
+    font-size:9px;
+    font-style:italic; 
+    float:left;
+}
+
+#lastfm #songs .song .time{
+    color:#bbb;
+    font-size:9px;
+    margin-left:6px;
+    float:right;
+}
+
 
 /* FOOTER STUFF */
 .social{
@@ -259,12 +346,24 @@ article .date{
     padding-left:30px;
     display:inline-block;
     float:right;
+    opacity:0.5;
 }
 article .date:hover{border:1px solid #ccc;}
 .date p{
     margin-bottom:0px;
 }
 
-#blog-back{
-    color:#ccc;
+/* PHOTOS STUFF */
+
+#photos{
+    text-align:center;
 }
+
+.thumb{
+   width:44%;
+   margin:10px 2%;
+   display:block;
+   box-shadow:0px 0px 10px #ccc;
+   padding:4px;
+}
+

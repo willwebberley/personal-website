@@ -59,6 +59,14 @@ def outputs():
 def teaching():
         return render_template('teaching.html', mobile = request.mobile)
 
+@app.route('/photos/')
+def photos():
+    photos = []
+    for root, _, files in os.walk('static/photos/thumbs/'):
+        for f in files:
+            photos.append(str(f))
+    return render_template('photos.html', mobile = request.mobile, photos = photos)
+
 # flyingsparx.net/logout
 # Logout of admin interface - pop cookie from session list
 @app.route('/logout/')
