@@ -30,11 +30,6 @@ function loadBindings(){
             lastfmHeight = $("header").height() - $("#profile").height() - $("nav").height() - 110;
             $("#lastfm").stop().animate({opacity: '0.4', height: lastfmHeight+'px'}, 300);
         });
-        $(".song").click(function(){
-            url = $(this).attr("rel");
-            console.log(url);
-            window.open(url);
-        });
     }
 }
 
@@ -122,7 +117,7 @@ function getLastFm(){
                     else{time = hours+" hours ago";}
                 }
             }
-            var ls = '<div rel="'+track.url+'" class="song';
+            var ls = '<a href="'+track.url+'" target="_blank" class="song';
             if(playing == "true"){
                    ls = ls + " now-playing";
                    nowPlaying = true;
@@ -139,7 +134,7 @@ function getLastFm(){
                 $("#songs").css({'margin-top':'30px'});
             }
             else{$("#songs").css({'margin-top':'0px'});}
-            ls = ls+'<div style="clear:both"></div><div>';
+            ls = ls+'<div style="clear:both"></div></a>';
             $("#songs").append(ls);
         }
         lHeight = $("header").height() - $("#profile").height() - $("nav").height() - 110;

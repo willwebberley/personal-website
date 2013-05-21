@@ -240,6 +240,7 @@ nav a.active{
 }
 
 #lastfm #songs .song{
+    display:block;
     width:96%;
     margin:5px 0px;
     padding-bottom:8px;
