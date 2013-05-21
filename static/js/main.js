@@ -54,7 +54,7 @@ function handleWindowResize(){
         $("section.small").css({'width':'45%', 'margin':'2%'}); 
         $("header").css({'padding':'0px','position':'fixed','top':'0px','width':'300px','height':'100%'});
         $("#main").css({'margin-left':'330px', 'margin-top':'0px', 'margin-right':'30px','width':'auto'});
-        $("footer").css({'position':'fixed','bottom':'20px','top':'auto','left':'15px','width':'280px'});
+        $("footer").css({'position':'fixed','bottom':'-70px','top':'auto','left':'15px','width':'280px'});
         $(".thumb").css({'width':'40%', 'margin':'10px 4%'});   
         $("nav a").css({'min-width':'60px'});
         $("nav").css({'text-align':'left', 'width': '60%', 'margin':'10px auto'});
@@ -142,10 +142,10 @@ function getLastFm(){
             ls = ls+'<div style="clear:both"></div><div>';
             $("#songs").append(ls);
         }
-     /*   lHeight = $("header").height() - $("#profile").height() - $("nav").height() - 110;
+        lHeight = $("header").height() - $("#profile").height() - $("nav").height() - 110;
         $("#lastfm").css({'height':lHeight+'px'});
-        $("#lastfm").fadeIn(400);
-       $("#lastfm").stop().animate({opacity:'0.4'}, 400);*/
+        $("#lastfm").fadeIn(1000);
+        $("#lastfm").stop().animate({opacity:'0.4'}, 1000);
         loadBindings();
     });
 }
@@ -154,7 +154,7 @@ $(window).resize(function(){
     if(mobile == false){
         handleWindowResize();
         tesellatePhotos();
-        moveFooter();
+        //moveFooter();
     }
 });
 
@@ -165,12 +165,13 @@ $(document).ready(function(){
         handleWindowResize();
         moveFooter();
         lastfmSuccess = getLastFm();
-        if(lastfmSuccess != false){
+        /*if(lastfmSuccess != false){
              lHeight = $("header").height() - $("#profile").height() - $("nav").height() - 110;
              $("#lastfm").css({'height':lHeight+'px'});
              $("#lastfm").fadeIn(400);
              $("#lastfm").stop().animate({opacity:'0.4'}, 400);
-        }
+        }*/
+        handleWindowResize();
         setInterval(function(){getLastFm()}, 30000);
     }   
     analytics(); 

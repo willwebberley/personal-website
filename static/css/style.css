@@ -226,6 +226,7 @@ nav a.active{
 
 #lastfm{
     display:none;
+    opacity:0.0;
     width:80%;
     background: url('/static/media/listening.png') rgba(0,0,0,0.1);
     background-repeat:no-repeat;
