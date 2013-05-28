@@ -139,7 +139,13 @@ li{
     font-family:'Helvetica Neue';
     font-weight:normal;
     color:#222;
-    font-size:14px;
+    font-size:13px;
+}
+li a:link{color:#00BFFF;}
+li a:visited{color:#00BFFF;}
+li a:hover{color:gray;}
+li strong{
+   font-style:italic;
 }
 
 label{

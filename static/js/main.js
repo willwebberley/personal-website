@@ -169,5 +169,5 @@ $(document).ready(function(){
         handleWindowResize();
         setInterval(function(){getLastFm()}, 30000);
     }   
-    analytics(); 
+//    analytics(); 
 });
