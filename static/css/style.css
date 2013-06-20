@@ -131,11 +131,21 @@ hr{
     font-family:'Courier New', 'Courier', 'Monospace';
 }
 
+pre{
+    margin:10px 10px;
+}
+pre ul li{
+    font-family:'courier-new', 'courier', 'monospace';
+}
+pre ul li *{
+    font-family:'courier-new', 'courier', 'monospace';
+}
+
 ul{
     margin:15px 20px;
 }
 
-li{
+ul li{
     font-family:'Helvetica Neue';
     font-weight:normal;
     color:#222;

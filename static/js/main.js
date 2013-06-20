@@ -71,19 +71,6 @@ function moveFooter(){
     $("footer").css({bottom:'-70px'});
 }
 
-function analytics(){
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-40575035-1']);
-    _gaq.push(['_setDomainName', 'flyingsparx.net']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-}
-
 function getLastFm(){
     $.getJSON("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=flyingsparks&api_key=d6b7875c6b075a3d0dfd03a15aacd1f0&format=json"    ,function(result){
         $("#songs").html('');
@@ -156,18 +143,14 @@ $(window).resize(function(){
 $(document).ready(function(){
     loadBindings();
     tesellatePhotos();
+    $("pre.python").snippet("python", {style:"acid", showNum:false, menu:false});
+    $("pre.shell").snippet("sh", {style:"acid", showNum:false, menu:false});
+    $("pre").css({'box-shadow':'none', 'padding':'0px', 'border-radius':'3px'});
     if(mobile == false){
         handleWindowResize();
         moveFooter();
         lastfmSuccess = getLastFm();
-        /*if(lastfmSuccess != false){
-             lHeight = $("header").height() - $("#profile").height() - $("nav").height() - 110;
-             $("#lastfm").css({'height':lHeight+'px'});
-             $("#lastfm").fadeIn(400);
-             $("#lastfm").stop().animate({opacity:'0.4'}, 400);
-        }*/
-        handleWindowResize();
+       handleWindowResize();
         setInterval(function(){getLastFm()}, 30000);
     }   
-//    analytics(); 
 });
