@@ -1,3 +1,19 @@
+#main article p.date{
+    padding-left:40px;
+}
+
+#main h2, #main h1, #main p{
+    padding-left:10px;
+    padding-right:10px;
+}
+
+
+h2{
+    background:#bbb;
+    color:white;
+    padding:5px 5px 5px 5px;
+}
+
 section.small{
     width:100%;
     margin:20px 0px;
@@ -8,7 +24,6 @@ section.small:nth-of-type(2){
 section{
     width:100%;
     padding-bottom;15px;
-    border-bottom:1px solid #bbb;
 }
 header{
     padding:10px 0px;
@@ -34,8 +49,8 @@ nav a{
 }
 
 #main{
-    margin:10px auto;
-    width:90%;
+    margin:30px auto;
+    width:100%;
 }
 footer{
     position:absolute;
@@ -48,3 +63,5 @@ footer{
     width:100%;
     margin:10px 0px;
 }
+
+

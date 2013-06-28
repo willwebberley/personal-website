@@ -27,17 +27,28 @@ def check_mobile():
 @app.route('/')
 def home():
     postList = getPosts()
-    return render_template('home.html', posts = postList, mobile = request.mobile)
+    return render_template('home.html', posts = postList, mobile = request.mobile, single = False)
 
 # flyingsparx.net/post/year/month/day
 # Get the post posted on this day and pass to template for rendering.
-# TODO: modified to allow for more than one post per day
 @app.route('/post/<year>/<month>/<day>/')
 def post(year, month, day):
     post = getPostByDate(year, month, day)
     postList = []
-    postList.append(post)
-    return render_template('home.html', posts = postList, mobile = request.mobile)
+    if not post == None:
+        postList.append(post)
+    return render_template('home.html', posts = postList, mobile = request.mobile, single = True)
+
+# flyingsparx.net/post/year/month/day/title
+# Get the post posted on this day and pass to template for rendering.
+# Changed site to use this method internally to allow for multiple posts/day.
+@app.route('/blog/<year>/<month>/<day>/<title>/')
+def postByTitle(year, month, day, title):
+    post = getPostByDateAndTitle(year, month, day, title.replace("-", " ").lower())
+    postList = []
+    if not post == None:
+        postList.append(post)
+    return render_template('home.html', posts = postList, mobile = request.mobile, single = True)
 
 # flyingsparx.net/contact
 @app.route('/contact/')
@@ -67,6 +78,7 @@ def photos():
             photos.append(str(f))
     return render_template('photos.html', mobile = request.mobile, photos = photos)
 
+
 # flyingsparx.net/logout
 # Logout of admin interface - pop cookie from session list
 @app.route('/logout/')
@@ -82,7 +94,7 @@ def blog():
 
 # flyingsparx.net/blog/new
 # If logged in and GET, show form for writing a new blog post.
-# if POST, get data from form and write to mongodb
+# if POST, get data from form and write to db
 @app.route('/blog/new/', methods=['GET', 'POST'])
 def new():
     if not 'id' in session:

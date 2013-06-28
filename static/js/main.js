@@ -1,14 +1,16 @@
+var narrowView = false;
+
 function loadBindings(){
-    $(".social").hover(function(){
+    $("footer .social").hover(function(){
         $(this).stop().animate({opacity:'1.0'},300);
     },function(){
         $(this).stop().animate({opacity:'0.3'},300);
     });
-    $("article").hover(function(){
+    /*$("article").hover(function(){
         $(this).find(".date").stop().animate({opacity:'1.0'},300);
      },function(){
         $(this).find(".date").stop().animate({opacity:'0.5'},300);
-     });
+     });*/
      $(".thumb").hover(function(){
         $(this).stop().animate({opacity:'0.6'},300);
      },function(){
@@ -35,9 +37,11 @@ function loadBindings(){
 
 function handleWindowResize(){
     if ($(window).width() < 700){
+        narrowView = true;
         $("section.small").css({'width':'100%', 'margin':'0px'});
         $("header").css({'padding':'10px 0px','position':'relative','width':'100%','height':'auto','clear':'both'});
-        $("#main").css({'margin':'10px auto', 'width':'90%'});
+        $("#main").css({'margin':'10px auto', 'width':'100%'});
+        $("h2").css({'padding':'20px 10px'});
         $("footer").css({'position':'absolute','top':'10px','left':'10px','width':'50px'});
         $(".thumb").css({'width':'100%', 'margin':'10px 0px'});
         $("nav a").css({'min-width':'auto'});
@@ -45,10 +49,11 @@ function handleWindowResize(){
         $("#lastfm").css({'display':'none'});
     }
     else{
+        narrowView = false;
         var smallSectWidth = ($(window).width() - 330)/2 - 20;
-        $("section.small").css({'width':'45%', 'margin':'2%'}); 
+        $("section.small").css({'width':'48%', 'margin':'1%'}); 
         $("header").css({'padding':'0px','position':'fixed','top':'0px','width':'300px','height':'100%'});
-        $("#main").css({'margin-left':'330px', 'margin-top':'0px', 'margin-right':'30px','width':'auto'});
+        $("#main").css({'margin-left':'310px', 'margin-top':'0px', 'margin-right':'10px','width':'auto'});
         $("footer").css({'position':'fixed','bottom':'-70px','top':'auto','left':'15px','width':'280px'});
         $(".thumb").css({'width':'40%', 'margin':'10px 4%'});   
         $("nav a").css({'min-width':'60px'});
@@ -66,6 +71,15 @@ function tesellatePhotos(){
         });
     });
 }
+
+/*function tesallatePosts(){
+    var $container = $('.tiled');
+    $container.imagesLoaded( function(){
+        $container.masonry({
+            itemSelector : 'article'
+        });
+    });
+}*/
 
 function moveFooter(){
     $("footer").css({bottom:'-70px'});
@@ -124,10 +138,12 @@ function getLastFm(){
             ls = ls+'<div style="clear:both"></div></a>';
             $("#songs").append(ls);
         }
-        lHeight = $("header").height() - $("#profile").height() - $("nav").height() - 110;
-        $("#lastfm").css({'height':lHeight+'px'});
-        $("#lastfm").fadeIn(1000);
-        $("#lastfm").stop().animate({opacity:'0.4'}, 1000);
+        if (narrowView == false){
+            lHeight = $("header").height() - $("#profile").height() - $("nav").height() - 110;
+            $("#lastfm").css({'height':lHeight+'px'});
+            $("#lastfm").fadeIn(1000);
+            $("#lastfm").stop().animate({opacity:'0.4'}, 1000);
+        }
         loadBindings();
     });
 }
@@ -136,7 +152,6 @@ $(window).resize(function(){
     if(mobile == false){
         handleWindowResize();
         tesellatePhotos();
-        //moveFooter();
     }
 });
 

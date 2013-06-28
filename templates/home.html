@@ -1,16 +1,28 @@
 {% extends "layout.html" %}
-
 {% block body %}
+
+<h1>Blog</h1>
+
 {% for post in posts %}
 {% autoescape false %}
-<article>
-    <div class="date"><p>{{ post.day }}/{{ post.month }}/{{ post.year }}
-    <a href="/post/{{ post.year }}/{{ post.month }}/{{ post.day }}">permalink</a></p></div>
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.content }}</p>
+{% if single == None%}
+<article class="part-post">
+    <p class="date">{{ post.day }}/{{ post.month }}/{{ post.year }}</p> 
+    <h2><a href="/post/{{ post.year }}/{{ post.month }}/{{ post.day }}">{{ post.title }}</a></h2>
+    {{ post.content.split("</p>")[0] }}..</p>
+    <p>[<a href="/post/{{ post.year }}/{{ post.month }}/{{ post.day }}">read more</a>]</p>
     <div style="clear:both"></div>
 </article>
+{% endif %}
+{% if single or not single%}
+<article class="full-post">
+    <h2><a href="/blog/{{ post.year }}/{{ post.month }}/{{ post.day }}/{{ post.title.replace(" ","-").lower() }}">{{ post.title }}</a></h2>
+    {{ post.content }}
+    <div style="clear:both"></div>
+    <p class="date">{{ post.day }}/{{ post.month }}/{{ post.year }}</p>    
+</article>
+{% endif %}
 {% endautoescape %}
 {% endfor %}
-
+</div>
 {% endblock %}

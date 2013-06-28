@@ -43,6 +43,12 @@ def getPostByDate(year, month, day):
  #   sess = Session()
     return sess.query(Post).filter_by(year=int(year),month=int(month),day=int(day)).first()
 
+def getPostByDateAndTitle(year, month, day, title):
+    posts = sess.query(Post).filter_by(year=int(year),month=int(month),day=int(day))
+    for post in posts:
+        if post.title.replace("-", " ").lower() == title:
+            return post
+
 def getPostsAsJSON():
   #  sess = Session()
     postList=[]

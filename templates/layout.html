@@ -4,10 +4,11 @@
     <meta name="description" content="Will Webberley - computer science PhD student at Cardiff University">
     <meta name="author" content="Will Webberley">
 	
-    <title>flyingsparx {% if not 'home' == request.endpoint and not 'post' == request.endpoint%}- {{request.endpoint}}{% endif %}</title>
+    <title>flyingsparx{% if not 'home' == request.endpoint and not 'post' == request.endpoint and not 'postByTitle' == request.endpoint%}: {{request.endpoint}}{% endif %}</title>
 	
     <link rel="icon" type="image/png" href="/static/media/favicon.png">
     <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/snippet.css" />
     {% if mobile == True %}
@@ -31,7 +32,7 @@
         <a href="/outputs" {% if 'outputs' == request.endpoint %}class="active"{% endif %}>outputs</a>
         <a href="/teaching" {% if 'teaching' == request.endpoint %}class="active"{% endif %}>teaching</a>
         <a href="/contact" {% if 'contact' == request.endpoint %}class="active"{% endif %}>contact</a>
-        <a href="/photos" {% if 'photos' == request.endpoint %}class="active"{% endif %}>pics</a>
+        <!--<a href="/photos" {% if 'photos' == request.endpoint %}class="active"{% endif %}>pics</a>-->
         <p class="command">~ $ █</p> 
     </nav>
 
