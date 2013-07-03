@@ -8,6 +8,7 @@ from tools import *
 app = Flask(__name__)
 admin_password = os.environ.get('FLYINGSPARX_PASSWORD')
 app.secret_key = os.environ.get('FLYINGSPARX_KEY')
+disallowed_in_url = ["'","(",")","?","%","&","!","@"]
 
 @app.route('/transfer')
 def transfer():
@@ -44,6 +45,10 @@ def post(year, month, day):
 # Changed site to use this method internally to allow for multiple posts/day.
 @app.route('/blog/<year>/<month>/<day>/<title>/')
 def postByTitle(year, month, day, title):
+    # remove some special characters so that comparisons can be made properly (to get the wanted post):
+    for ch in disallowed_in_url:
+        if ch in title:
+            title = title.replace(ch, "")
     post = getPostByDateAndTitle(year, month, day, title.replace("-", " ").lower())
     postList = []
     if not post == None:

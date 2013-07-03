@@ -10,6 +10,7 @@ engine = create_engine('sqlite:///static/data/posts.db', echo=True)
 Base = declarative_base()
 Session = sessionmaker(bind=engine)
 sess = Session()
+disallowed_in_url = ["'","(",")","?","%","&","!","@"]
 
 class Post(Base):
     __tablename__ = 'posts'
@@ -33,24 +34,27 @@ class Post(Base):
 Base.metadata.create_all(engine)
 
 def getPosts():
-#    sess = Session()
     myList = []
     for instance in sess.query(Post).order_by(Post.date.desc()):
         myList.append(instance)
     return myList
 
 def getPostByDate(year, month, day):
- #   sess = Session()
     return sess.query(Post).filter_by(year=int(year),month=int(month),day=int(day)).first()
 
 def getPostByDateAndTitle(year, month, day, title):
     posts = sess.query(Post).filter_by(year=int(year),month=int(month),day=int(day))
     for post in posts:
-        if post.title.replace("-", " ").lower() == title:
+        # Remove some special characters before comparing the reuqested title against the current title.
+        title_check = post.title
+        for ch in disallowed_in_url:
+            if ch in title_check:
+                title_check = title.replace(ch, "")
+        if title_check.replace("-", " ").lower() == title:
+            post.url_title = title_check
             return post
 
 def getPostsAsJSON():
-  #  sess = Session()
     postList=[]
     for post in sess.query(Post).order_by(Post.date.desc()):    
         date = str(post.day)+"/"+str(post.month)+"/"+str(post.year)
@@ -63,16 +67,13 @@ def newPost(title, text, day, month, year):
     id = int(math.floor(time.time()))    
     post = Post(id,title,text,post_date,day,month,year)
     print post 
-   # sess = Session()
     sess.add(post)
     sess.commit()
 
 def getPostById(id):
-    #sess = Session()
     return sess.query(Post).filter_by(id=id).first()
 
 def updatePost(id, title, text, day, month, year):
-    #sess = Session()
     post = sess.query(Post).filter_by(id=id).first()
     post.title = title
     post.content = text
@@ -84,7 +85,7 @@ def updatePost(id, title, text, day, month, year):
 
 def deletePost(id):
     post = getPostById2(id)
-    #sess = Session()
+    sess = Session()
     sess.delete(post)
     sess.commit()
 

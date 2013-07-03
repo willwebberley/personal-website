@@ -154,6 +154,13 @@ hr{
     background-position:left center;
     padding-left:30px;
 }
+.tags{
+    background:url('/static/media/tag.png');
+    background-repeat:no-repeat;
+    background-size:20px auto;
+    background-position:left center;
+    padding-left:30px;
+}
 .small-image{
     width:400px;
 }
