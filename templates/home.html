@@ -16,7 +16,7 @@
 {% endif %}
 {% if single or not single%}
 <article class="full-post">
-    <h2><a href="/blog/{{ post.year }}/{{ post.month }}/{{ post.day }}/{{ post.title.replace(" ","-").lower() }}">{{ post.title }}</a></h2>
+    <h2><a href="/blog/{{ post.year }}/{{ post.month }}/{{ post.day }}/{{ post.url_title.lower() }}">{{ post.title }}</a></h2>
     {{ post.content }}
     <div style="clear:both"></div>
     <p class="date">{{ post.day }}/{{ post.month }}/{{ post.year }}</p>    

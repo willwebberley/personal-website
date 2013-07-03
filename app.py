@@ -8,7 +8,6 @@ from tools import *
 app = Flask(__name__)
 admin_password = os.environ.get('FLYINGSPARX_PASSWORD')
 app.secret_key = os.environ.get('FLYINGSPARX_KEY')
-disallowed_in_url = ["'","(",")","?","%","&","!","@"]
 
 @app.route('/transfer')
 def transfer():
@@ -45,11 +44,7 @@ def post(year, month, day):
 # Changed site to use this method internally to allow for multiple posts/day.
 @app.route('/blog/<year>/<month>/<day>/<title>/')
 def postByTitle(year, month, day, title):
-    # remove some special characters so that comparisons can be made properly (to get the wanted post):
-    for ch in disallowed_in_url:
-        if ch in title:
-            title = title.replace(ch, "")
-    post = getPostByDateAndTitle(year, month, day, title.replace("-", " ").lower())
+    post = getPostByDateAndTitle(year, month, day, title)
     postList = []
     if not post == None:
         postList.append(post)
@@ -113,9 +108,9 @@ def new():
     if request.method == 'POST':
         title = request.form['title']
         text = request.form['text']
-        day = int(request.form['day'])
-        month = int(request.form['month'])
-        year = int(request.form['year'])
+        day = str(request.form['day'])
+        month = str(request.form['month'])
+        year = str(request.form['year'])
         newPost(title, text, day, month, year)
     return redirect(url_for('show'))
 
@@ -152,7 +147,7 @@ def edit(blog_id):
                 <input type="text" placeholder="year" name="year" value="'''+str(post.year)+'''"/>
                 <hr /><input type="submit" value="submit" /></form><hr /><a href="/blog/delete/'''+str(blog_id)+'''">Delete this post</a>'''
     if request.method == 'POST':
-        updatePost(blog_id, request.form['title'], request.form['text'], int(request.form['day']), int(request.form['month']), int(request.form['year']))
+        updatePost(blog_id, request.form['title'], request.form['text'], str(request.form['day']), str(request.form['month']), str(request.form['year']))
         return redirect(url_for('show'))
 
 # flyingsparx.net/blog/delete/blog_id
