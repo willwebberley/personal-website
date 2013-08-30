@@ -393,10 +393,17 @@ article{
 article img{
     float:left;
     max-width:300px;
+    max-height:350px;
     margin-right:10px;
-    margin-bottom:10px;
+    margin-bottom:5px;
     margin-top:10px;
     clear:left;
+}
+article img.right{
+    float:right;
+    clear:right;
+    margin-right:30px;
+    margin-left:10px;
 }
 
 article h2{

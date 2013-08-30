@@ -6,7 +6,7 @@ from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('sqlite:///static/data/posts.db', echo=True)
+engine = create_engine('sqlite:///static/data/posts.db')
 Base = declarative_base()
 Session = sessionmaker(bind=engine)
 sess = Session()
@@ -66,8 +66,6 @@ def getPostByDateAndTitle(year, month, day, title):
     posts = sess.query(Post).filter_by(year=int(year),month=int(month),day=int(day))
     for post in posts:
         post = processPost(post)
-        print post.url_title.replace("-", " ").lower()
-        print title.lower()
         if post.url_title.lower() == title.lower():
             return post
 
@@ -85,7 +83,6 @@ def newPost(title, text, day, month, year):
     post_date = time.mktime((datetime.date(int(year), int(month), int(day))).timetuple())
     id = int(math.floor(time.time()))    
     post = Post(id,title,text,post_date,day,month,year)
-    print post 
     sess.add(post)
     sess.commit()
 
@@ -99,7 +96,6 @@ def updatePost(id, title, text, day, month, year):
     post.title = title
     post.content = text
     post.day = day
-    print post.day
     post.month = month
     post.year = year
     post.date = time.mktime((datetime.date(int(year), int(month), int(day))).timetuple())
