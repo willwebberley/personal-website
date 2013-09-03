@@ -1,7 +1,6 @@
 {% extends "layout.html" %}
 {% block body %}
 
-<h1>Blog</h1>
 
 {% for post in posts %}
 {% autoescape false %}
@@ -16,11 +15,14 @@
 {% endif %}
 {% if single or not single%}
 <article class="full-post">
-    <h2><a href="/blog/{{ post.year }}/{{ post.month }}/{{ post.day }}/{{ post.url_title.lower() }}">{{ post.title }}</a> <span style="font-size:14px; color:white; float:right"><a href="/blog/{{ post.year }}/{{ post.month }}/{{ post.day }}/{{ post.url_title.lower() }}/#comments">Comment</a></span></h2>
-    {{ post.content }}
-    <div style="clear:both"></div>
-    <p class="date">{{ post.day }}/{{ post.month }}/{{ post.year }} - <a href="/blog/{{ post.year }}/{{ post.month }}/{{ post.day }}/{{ post.url_title.lower() }}/#disqus_thread">Comments</a></p>    
+    <div class="meta"><p>
+       <span class="comment"><a href="/blog/{{ post.year }}/{{ post.month }}/{{ post.day }}/{{ post.url_title.lower() }}/#comments">Comment</a></span> -
+       <span class="date"><a href="/blog/{{ post.year }}/{{ post.month }}/{{ post.day }}/{{ post.url_title.lower() }}">{{ post.day }}/{{ post.month }}/{{ post.year }}</a></span>
+   </p></div>
 
+    <h2><a href="/blog/{{ post.year }}/{{ post.month }}/{{ post.day }}/{{ post.url_title.lower() }}">{{ post.title }}</a> </h2>
+    <div style="clear:both"></div>
+    {{ post.content }}
 </article>
 
 {% if single == True %}

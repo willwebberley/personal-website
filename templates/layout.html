@@ -26,14 +26,14 @@
     </div>
     
     <nav>
-        <p class="command">~ $ ls pages/</p>
+<!--        <p class="command">~ $ ls pages/</p>-->
         <a href="/" {% if 'home' == request.endpoint or 'post' == request.endpoint%}class="active"{% endif %}>blog</a>
         <a href="/research" {% if 'research' == request.endpoint %}class="active"{% endif %}>research</a>
         <a href="/outputs" {% if 'outputs' == request.endpoint %}class="active"{% endif %}>outputs</a>
         <a href="/teaching" {% if 'teaching' == request.endpoint %}class="active"{% endif %}>teaching</a>
         <a href="/contact" {% if 'contact' == request.endpoint %}class="active"{% endif %}>contact</a>
         <!--<a href="/photos" {% if 'photos' == request.endpoint %}class="active"{% endif %}>pics</a>-->
-        <p class="command">~ $ █</p> 
+<!--        <p class="command">~ $ █</p> -->
     </nav>
 
     <div id="lastfm">
