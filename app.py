@@ -65,6 +65,11 @@ def research():
 def outputs():
         return render_template('outputs.html', mobile = request.mobile)
 
+# flyingsparx.net/software
+@app.route('/software/')
+def software():
+        return render_template('software.html', mobile = request.mobile)
+
 # flyingsparx.net/teaching
 @app.route('/teaching/')
 def teaching():
