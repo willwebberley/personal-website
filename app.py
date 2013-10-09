@@ -60,15 +60,21 @@ def contact():
 def research():
         return render_template('research.html', mobile = request.mobile)
 
-# flyingsparx.net/outputs
-@app.route('/outputs/')
-def outputs():
-        return render_template('outputs.html', mobile = request.mobile)
+# flyingsparx.net/output
+@app.route('/output/')
+def output():
+        return render_template('output.html', mobile = request.mobile)
 
-# flyingsparx.net/software
-@app.route('/software/')
-def software():
-        return render_template('software.html', mobile = request.mobile)
+# flyingsparx.net/fixes
+@app.route('/fixes/')
+def fixes():
+        return render_template('fixes.html', mobile = request.mobile)
+
+
+# flyingsparx.net/project
+@app.route('/project/')
+def project():
+        return render_template('project.html', mobile = request.mobile)
 
 # flyingsparx.net/teaching
 @app.route('/teaching/')
