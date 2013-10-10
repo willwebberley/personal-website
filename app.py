@@ -65,10 +65,10 @@ def research():
 def output():
         return render_template('output.html', mobile = request.mobile)
 
-# flyingsparx.net/fixes
-@app.route('/fixes/')
-def fixes():
-        return render_template('fixes.html', mobile = request.mobile)
+# flyingsparx.net/notes
+@app.route('/notes/')
+def notes():
+        return render_template('notes.html', mobile = request.mobile)
 
 
 # flyingsparx.net/project

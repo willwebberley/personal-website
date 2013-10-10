@@ -28,11 +28,11 @@
     <nav>
 <!--        <p class="command">~ $ ls pages/</p>-->
         <a href="/" {% if 'home' == request.endpoint or 'post' == request.endpoint%}class="active"{% endif %}>blog</a>
+        <a href="/notes" {% if 'notes' == request.endpoint %}class="active"{% endif %}>notes</a>
         <a href="/research" {% if 'research' == request.endpoint %}class="active"{% endif %}>research</a>
+        <a href="/teaching" {% if 'teaching' == request.endpoint %}class="active"{% endif %}>teaching</a>
         <a href="/output" {% if 'output' == request.endpoint %}class="active"{% endif %}>output</a>
         <a href="/project" {% if 'project' == request.endpoint %}class="active"{% endif %}>project</a>
-        <a href="/fixes" {% if 'fixes' == request.endpoint %}class="active"{% endif %}>fixes</a>
-        <a href="/teaching" {% if 'teaching' == request.endpoint %}class="active"{% endif %}>teaching</a>
         <a href="/contact" {% if 'contact' == request.endpoint %}class="active"{% endif %}>contact</a>
         <!--<a href="/photos" {% if 'photos' == request.endpoint %}class="active"{% endif %}>pics</a>-->
 <!--        <p class="command">~ $ █</p> -->
