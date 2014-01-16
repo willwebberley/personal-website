@@ -7,7 +7,9 @@ from tools import *
 
 app = Flask(__name__)
 admin_password = os.environ.get('FLYINGSPARX_PASSWORD')
+access_token = os.environ.get('FLYINGSPARX_TOKEN')
 app.secret_key = os.environ.get('FLYINGSPARX_KEY')
+
 
 @app.route('/transfer')
 def transfer():
@@ -110,6 +112,8 @@ def blog():
 def new():
     if not 'id' in session:
         return redirect(url_for('show'))
+    if not session['id'] == access_token:
+        return redirect(url_for('show'))
     if request.method == 'GET':
         return '''<form method="POST" action="/blog/new/">
                     <input type="text" placeholder="title" name="title" /><hr /><textarea name="text" placeholder="text"></textarea><hr />
@@ -132,9 +136,11 @@ def new():
 def show():
     if request.method == 'POST':
         if request.form['password'] == admin_password:
-            session['id'] = time.time()
+            session['id'] = access_token
         return redirect(url_for('show'))
     if not 'id' in session:
+        return 'Password: <form method="post" action="/blog/show/"><input type="password" name="password" /><input type="submit" value="submit" /></form>'
+    if not session['id'] == access_token:
         return 'Password: <form method="post" action="/blog/show/"><input type="password" name="password" /><input type="submit" value="submit" /></form>'
     posts = getPosts()
     ret = "<a href='/blog/new/'>Create a new post</a> - <a href='/logout/'>Logout</a><hr />"
@@ -149,6 +155,8 @@ def show():
 @app.route('/blog/edit/<blog_id>', methods=['GET', 'POST'])
 def edit(blog_id):
     if not 'id' in session:
+        return redirect(url_for('show'))
+    if not session['id'] == access_token:
         return redirect(url_for('show'))
     if request.method == 'GET':
         post = getPostById(blog_id)
@@ -165,6 +173,8 @@ def edit(blog_id):
 @app.route('/blog/delete/<blog_id>')
 def delete(blog_id):
     if not 'id' in session:
+        return redirect(url_for('show'))
+    if not session['id'] == access_token:
         return redirect(url_for('show'))
     deletePost(blog_id)
     return redirect(url_for('show'))
