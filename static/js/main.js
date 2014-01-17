@@ -160,6 +160,10 @@ $(document).ready(function(){
     tesellatePhotos();
     $("pre.python").snippet("python", {style:"acid", showNum:false, menu:false});
     $("pre.shell").snippet("sh", {style:"acid", showNum:false, menu:false});
+    $("pre.javascript").snippet("javascript", {style:"acid", showNum:false, menu:false});
+    $("pre.java").snippet("java", {style:"acid", showNum:false, menu:false});
+
+
     $("pre").css({'box-shadow':'none', 'padding':'0px', 'border-radius':'3px'});
     if(mobile == false){
         handleWindowResize();
