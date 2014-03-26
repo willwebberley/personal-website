@@ -1,0 +1,65 @@
+#!/bin/bash
+
+# Script to allow transcoding of media streams to be playable by Chromecast.
+#
+# Dependencies:
+# - ffmpeg
+#
+# Installation:
+# - Install to /usr/local/bin
+# - Chmod to allow executable
+# - Ensure it's called from Mediatomb's config.xml
+
+video=$1
+legenda=""
+comLegenda=0
+#Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, 
+BackColour, Bold, Italic, Underline, BorderStyle, Outline, Shadow, Alignment, 
+MarginL, MarginR, MarginV, AlphaLevel, Encoding
+subtitleStyle="Default,Arial,20,65535,65535,&H0,&H0,0,0,0,1,1,0,2,10,10,10,0,0"
+
+#Levar em conta que as extensões podem estar maiusculas
+IFS=$(echo -e "\t\n")
+for tmpfile in $(echo $video | sed 's/....$/*/')*; do
+    filename=$(basename "$tmpfile")
+    extension="${filename##*.}"
+    echo $extension
+    if [ "$extension" == "ass" ]; then
+        echo 'Legenda ASS encontrada'
+        legenda=$(echo $video | sed 's/...$/ass/')
+        comLegenda=1
+    elif [ "$extension" == "srt" ]; then
+        echo 'Legenda SRT encontrada'
+        legenda=$(echo $video | sed 's/...$/srt/')
+        comLegenda=1
+    elif [ "$extension" == "ssa" ]; then
+        echo 'Legenda SSA encontrada'
+        legenda=$(echo $video | sed 's/...$/ssa/')
+        comLegenda=1
+    elif [ "$extension" == "sub" ]; then
+        echo 'Legenda SubRip encontrada'
+        legenda=$(echo $video | sed 's/...$/sub/')
+        comLegenda=1
+    fi
+
+done
+
+if [ $comLegenda == 1 ]; then
+    encoding=$(file -bi "$legenda" | sed -e 's/.*[ ]charset=//')
+    encoding=`echo "$encoding" | tr [:lower:] [:upper:]`
+
+    ffmpeg -y -sub_charenc "$encoding" -i "$legenda" "/tmp/legenda.ass"
+    sed -i '/Style: /c\Style: '$subtitleStyle'' /tmp/legenda.ass
+    exec ffmpeg -i "$video" -y -c:v libvpx -b:v 5M -crf 10 -c:a libvorbis -cpu-used 
+16 -threads 8 -f webm -vf subtitles="/tmp/legenda.ass" -map 0 -map -0:s "$2"
+
+elif [ ${video##*.} == webm ]; then
+    exec ffmpeg -i "$video" -y -vcodec copy -acodec copy -f webm "$2"
+
+else
+    exec ffmpeg -i "$video" -y -c:v libvpx -b:v 5M -crf 10 -c:a libvorbis -cpu-used 
+16 -threads 8 -f webm "$2"
+fi
+
+reset
+exit
