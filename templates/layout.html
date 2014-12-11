@@ -7,80 +7,35 @@
     <title>flyingsparx{% if not 'home' == request.endpoint and not 'post' == request.endpoint and not 'postByTitle' == request.endpoint%}: {{request.endpoint}}{% endif %}</title>
 	
     <link rel="icon" type="image/png" href="/static/media/favicon.png">
-    <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/snippet.css" />
-    {% if mobile == True %}
-    <link rel="stylesheet" type="text/css"  href="/static/css/mobile.css" />
-    {% endif %}
-    <script type="text/javascript" src="/static/js/jquery.js"></script>		
+    <link rel="stylesheet" media="(max-width: 800px),handheld" type="text/css"  href="/static/css/mobile.css" />
 </head>
 
 <body>
 <header>
 	<div id="profile">
-        <img src="http://www.flyingsparx.net/static/media/will.jpg" alt="Will" />
-        <p><a href="/">Will Webberley</a></p>
-        <p>Computer science researcher at Cardiff University - internet/mobile/social computing enthusiast</p>
+        <p><a href="/" {% if 'home' == request.endpoint%}class="active"{% endif %}>Will Webberley</a></p>
     </div>
     
     <nav>
-        <a href="/" {% if 'home' == request.endpoint or 'post' == request.endpoint%}class="active"{% endif %}>blog</a>
+        <a href="/blog" {% if 'blog' == request.endpoint or 'post' == request.endpoint%}class="active"{% endif %}>blog</a>
         <a href="/research" {% if 'research' == request.endpoint %}class="active"{% endif %}>research</a>
         <!--<a href="/teaching" {% if 'teaching' == request.endpoint %}class="active"{% endif %}>teaching</a>-->
         <a href="/output" {% if 'output' == request.endpoint %}class="active"{% endif %}>output</a>
         <a href="/project" {% if 'project' == request.endpoint %}class="active"{% endif %}>project</a>
         <a href="/contact" {% if 'contact' == request.endpoint %}class="active"{% endif %}>contact</a>
     </nav>
-
-    <div id="lastfm">
-        <div id="songs">
-
-        </div>
-    </div>
+    <div class="clear"></div>
 </header>
 
-
 <div id="main">	
-    <div id="wrapper">
-        {% block body %}
+    {% block body %}
 
-        {% endblock %}
-    </div>
+    {% endblock %}
 </div>
 
-<footer>
-    <a href="http://www.twitter.com/flyingSparx" target="_blank">
-        <img src="/static/media/twitter.png" class="social" alt="Twitter" />
-    </a>
-    <a href="https://plus.google.com/117295241444122869150" target="_blank">
-        <img src="/static/media/google.png" class="social" alt="Google Plus" />
-    </a>
-    <a href="http://www.last.fm/user/flyingsparks" target="_blank">
-        <img src="/static/media/lastfm.png" class="social" alt="Last FM" />
-    </a>
-    <a href="http://www.github.com/flyingsparx" target="_blank">
-        <img src="/static/media/github.png"  class="bg social" alt="Github" />
-    </a>
-    <a href="http://www.foursquare.com/flyingsparx" target="_blank">
-        <img src="/static/media/foursquare.png" class="social" alt="Foursqaure" />
-    </a>
-    <!--
-    <a href="http://www.facebook.com/flyingSparx" target="_blank">
-        <img src="/static/media/fb.png" class="social" alt="Facebook" />
-    </a>-->
-</footer>
-
-<script type="text/javascript">
-{% if mobile == False %}var mobile = false;{% endif %}
-{% if mobile == True %}var mobile = true;{% endif %}
-</script>	
-<script type="text/javascript" src="/static/js/easing.js"></script>
-<script type="text/javascript" src="/static/js/color.js"></script>
-<script type="text/javascript" src="/static/js/masonry.js"></script>
-<script type="text/javascript" src="/static/js/snippet.js"></script>
-<script type="text/javascript" src="/static/js/sh_sh.js"></script>
 <script type="text/javascript" src="/static/js/main.js"></script>
 <script type="text/javascript">
 var _gaq = _gaq || [];

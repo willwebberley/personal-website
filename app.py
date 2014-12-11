@@ -24,12 +24,18 @@ def check_mobile():
     request.mobile = detectMobile(request)
 
 # flyingsparx.net/ 
-# Get all blog posts and pass to templates for rendering
-# TODO: modified to allow pagination
 @app.route('/')
 def home():
+    return render_template('home.html')
+
+# flyingsparx.net/blog 
+# Get all blog posts and pass to templates for rendering
+# TODO: modified to allow pagination
+@app.route('/blog')
+def blog():
     postList = getPosts()
-    return render_template('home.html', posts = postList, mobile = request.mobile, single = False)
+    return render_template('blog.html', posts = postList, mobile = request.mobile, single = False)
+
 
 # flyingsparx.net/post/year/month/day
 # Get the post posted on this day and pass to template for rendering.
@@ -101,8 +107,8 @@ def logout():
 
 # flyingspsarx.net/blog
 # Redirect to the blog list page
-@app.route('/blog/')
-def blog():
+@app.route('/manage/')
+def manage():
     return redirect(url_for('show'))
 
 # flyingsparx.net/blog/new

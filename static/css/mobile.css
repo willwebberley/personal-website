@@ -1,11 +1,3 @@
-
-
-#main h2, #main h1, #main p{
-    padding-left:10px;
-    padding-right:10px;
-}
-
-
 h2{
     padding:5px 5px 5px 5px;
 }
@@ -30,34 +22,38 @@ header{
 }
 #profile{
     width:80%;
+    margin:0px auto;
+    float:none;
+    display:block;
 }
 #profile p{
     width:100%;
+    text-align:center;
     font-size:17px;
+    float:none;
+    margin:0px; 
 }
 nav{
     width:90%;
+    display:block;
     text-align:center;
+    margin:0px auto;
+    float:none;
 }
 nav a{
-    font-size:30px;
+    font-size:15px;
     width:auto;
 }
 
+#profile_image{
+    width:30%;
+}
+
+#profile_contact{
+    width:100%;
+}
+
 #main{
-    margin:30px auto;
-    width:100%;
+    margin:30px 1%;
+    width:98%;
 }
-footer{
-    position:absolute;
-    top:10px;
-    left:10px;
-    width:50px;
-}
-
-.thumb{
-    width:100%;
-    margin:10px 0px;
-}
-
-

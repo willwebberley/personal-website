@@ -8,6 +8,8 @@
 
 html,body{
     height:100%;
+    padding:0px;
+    margin:0px;
 }
 
 body{
@@ -15,21 +17,17 @@ body{
 }
 
 header{
-	position:fixed;
-	width:300px;
-    height:100%;
+    margin:0px;
+    padding:10px 0px;
+	position:relative;
+	width:100%;
 	background:url('/static/media/header-bg.png');
 }
 
 #main{
-    margin-left:310px;
-    padding-top:10px;
-    margin-right:10px;
-    position:relative;
-}
-
-#wrapper{
-    width:100%;
+    margin:10px auto;
+    width:70%;
+    max-width:1000px;
     position:relative;
 }
 
@@ -45,13 +43,18 @@ section{
     position:relative;
 }
 
+section.narrow{
+    max-width:590px;
+    margin:0px auto;
+}
+
 section.main{
     display:block;
 }
 
 section.small{
-    margin:30px 0px;
-    width:50%;
+    width:48%;
+    padding:1%;
     display:inline-block;
     float:left;
 }
@@ -61,7 +64,6 @@ section.small:nth-of-type(2){
 }
 
 .item{
-/*    background:rgba(138, 138, 138, 0.1);*/
     background:white;
     padding:8px;
     box-shadow:0px 0px 1px #ccc;
@@ -77,6 +79,10 @@ section.small:nth-of-type(2){
     margin-bottom:30px;
 }
 
+.clear{
+    clear:both;
+}
+
 h1{
     color:rgba(100,100,100,0.9);
     margin-bottom:20px;
@@ -89,37 +95,34 @@ h1{
 }
 
 h2{
-/*    color:#00BFFF;*/
     border-bottom:4px solid #00BFFF;
-    /*color:rgba(250,250,250,0.9);*/
     color:black;
     margin-top:25px;
     margin-bottom:15px;
     font-weight:lighter;
     padding:5px 10px;
-/*    text-shadow:1px 1px #bbb;*/
     font-size:20px;
     font-family: 'PT Sans', sans-serif;
 }
 
 h3{
-    color:#00BFFF;
-    opacity:0.7;
+    color:rgb(150,150,150);
     margin-top:15px;
     margin-bottom:12px;
+    font-size:28px;
 }
 
 p{
     font-family:'PT Sans', 'Helvetica Neue', 'Helvetica', 'Verdana', 'Sans-serif';
     font-weight:normal;
     color:#222;
-    font-size:13px;
+    font-size:15px;
     margin-bottom:8px;
     line-height:20px;
 }
-p a:link{margin:0px;color:#00BFFF;}
-p a:visited{margin:0px; color:#00BFFF;}
-p a:hover{margin:0px; color:#aaa;}
+a:link{margin:0px;color:#00BFFF;}
+a:visited{margin:0px; color:#00BFFF;}
+a:hover{margin:0px; color:#aaa;}
 
 .right{
      float:right;
@@ -166,6 +169,7 @@ hr{
 }
 .small-image{
     width:400px;
+    margin-bottom:10px;
 }
 
 .code{
@@ -175,13 +179,10 @@ hr{
 
 pre{
     margin:0px 20px;
-}
-pre ul li{
     font-family:'courier-new', 'courier', 'monospace';
-    margin:0px;
-}
-pre ul li *{
-    font-family:'courier-new', 'courier', 'monospace';
+    font-size:11px;
+    padding:4px;
+    background:rgb(240,240,240);
 }
 
 ul{
@@ -216,68 +217,52 @@ label{
 /* HEADER STUFF */
 
 #profile{
-    position:relative;
+    float:left;
+    display:inline-block;
     width:250px;
-    margin:20px auto;
-}
-
-#profile img{
-    width:180px;
-    display:block;
-    position:relative;
-    margin:0px auto;
-    margin-bottom:10px;
-    border-radius:30%;
-    box-shadow:0px 0px 15px #222;
-    border:3px solid white;
-    border:none;
+    margin-left:20px;
+    margin-top:10px;
 }
 
 #profile p{
     font-family:'Helvetica Neue', 'Helvetica', 'Verdana', 'Sans-serif';
-    text-align:center;
     font-size:12px;
     line-height:18px;
     color:#ccc;
     text-shadow:2px 2px 3px black;
 }
 
-#profile img + p{
+#profile p:first-child{
     font-size:20px;
     margin-bottom:7px;
     color:white;
 }
-#profile img + p a:link{color:white;}
-#profile img + p a:visited{color:white;}
-#profile img + p a:hover{color:#00BFFF;}
+#profile p:first-child a:link{
+    color:white;
+}
+#profile p:first-child a:visited{
+    color:white;
+}
+#profile p:first-child a.active{
+    color:#00BFFF;
+}
 
 p strong{
     font-weight:bold;
 }
 
 nav{
-    display:block;
-    width:60%;
-    background:rgba(0,0,0,0.3);
-    padding:10px;
-    border-radius:20px;
-    margin:10px auto;
-}
-
-nav .command{
-    font-family: 'Courier New', 'Courier', 'monospace';
-    color:#bbb;
-    font-size:12px;
-    text-align:left;
-    margin:5px 5px;
+    display:inline-block;
+    float:right;
+    margin-right:10px;
 }
 
 nav a{
     font-size:13px;
     display:inline-block;
-    min-width:60px;
+    width:80px;
     margin:3px;
-    text-align:left;
+    text-align:center;
     padding:5px;
     border-radius:4px;
     font-family:'Courier New', 'Courier';
@@ -362,7 +347,6 @@ nav a.active{
 .social{
     width:40px;
     margin:4px;
-    border-radius:20%;
 }
 
 footer .social{
@@ -379,9 +363,63 @@ footer .social{
 }
 #copyright{
     color:gray;
-
 }
 
+
+
+/* HOME STUFF */
+#profile_image{
+    width:270px;
+    float:right;
+    margin-left:10px;
+    margin-bottom:10px;
+    clear:right;
+    border-radius:5px;
+}
+
+
+#profile_contact{
+    float:right;
+    clear:right;
+    margin-left:10px;
+    margin-bottom:10px;
+    width:250px;
+}
+#profile_contact p{
+    padding-left:30px;
+    margin-left:8px;
+    background-size:20px 20px;
+    background-repeat:no-repeat;
+    background-position:top left;
+}
+
+p.twitter{background-image:url('/static/media/social-twitter-outline.png');}
+p.email{background-image:url('/static/media/paper-airplane.png');}
+p.github{background-image:url('/static/media/social-github-outline.png');}
+
+div.social{
+    clear:both;
+    margin:5px 0px;
+    margin-left:5%;
+    height:30px;
+    width:95%;
+    line-height:30px;
+    padding-left:40px;
+    background-size:30px 30px;
+    background-repeat:no-repeat;
+    background-position:left center; 
+}
+
+div.social.twitter{background-image:url('/static/media/social-twitter-outline.png');}
+div.social.twitter:hover{background-image:url('/static/media/social-twitter.png');}
+div.social.github{background-image:url('/static/media/social-github-outline.png');}
+div.social.github:hover{background-image:url('/static/media/social-github.png');}
+div.social.lastfm{background-image:url('/static/media/social-lastfm-outline.png');}
+div.social.lastfm:hover{background-image:url('/static/media/social-lastfm.png');}
+div.social.linkedin{background-image:url('/static/media/social-linkedin-outline.png');}
+div.social.linkedin:hover{background-image:url('/static/media/social-linkedin.png');}
+div.social.instagram{background-image:url('/static/media/social-instagram-outline.png');background-size:25px 25px;background-position:2px center;}
+div.social.instagram:hover{background-image:url('/static/media/social-instagram.png');background-size:25px 25px;background-position:2px center;}
 
 
 /* BLOG STUFF */
@@ -422,7 +460,6 @@ article img.large-image{
 }
 
 article h2{
-    /*background:url('/static/media/header-bg.png');*/
     border-radius:0px 0px 0px 0px;
     padding:10px;
     margin-top:0px;
