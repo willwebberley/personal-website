@@ -22,9 +22,9 @@ article img{
     position:absolute;
     top:5px;
     left:5px;
-    background-image:url('/static/media/drag.png');
-    width:35px;
-    height:35px;
+    background-image:url('/static/media/navicon.png');
+    width:40px;
+    height:40px;
     background-size:cover;
 }
 
@@ -115,12 +115,12 @@ header{
 #profile{
     float:left;
     margin:0px;
-    margin-left:50px;
+    margin-left:55px;
     display:block;
 }
 #profile p{
     font-size:20px;
-    line-height:25px;
+    line-height:30px;
     margin:0px; 
 }
 
