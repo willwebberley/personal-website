@@ -45,7 +45,7 @@ def post(year, month, day):
     postList = []
     if not post == None:
         postList.append(post)
-    return render_template('home.html', posts = postList, mobile = request.mobile, single = True)
+    return render_template('blog.html', posts = postList, mobile = request.mobile, single = True)
 
 # flyingsparx.net/post/year/month/day/title
 # Get the post posted on this day and pass to template for rendering.
@@ -56,7 +56,7 @@ def postByTitle(year, month, day, title):
     postList = []
     if not post == None:
         postList.append(post)
-    return render_template('home.html', posts = postList, mobile = request.mobile, single = True)
+    return render_template('blog.html', posts = postList, mobile = request.mobile, single = True)
 
 # flyingsparx.net/contact
 @app.route('/contact/')

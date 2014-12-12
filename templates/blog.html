@@ -4,20 +4,11 @@
 
 {% for post in posts %}
 {% autoescape false %}
-{% if single == None%}
-<article class="part-post">
-    <p class="date">{{ post.day }}/{{ post.month }}/{{ post.year }}</p> 
-    <h2><a href="/post/{{ post.year }}/{{ post.month }}/{{ post.day }}">{{ post.title }}</a></h2>
-    {{ post.content.split("</p>")[0] }}..</p>
-    <p>[<a href="/post/{{ post.year }}/{{ post.month }}/{{ post.day }}">read more</a>]</p>
-    <div style="clear:both"></div>
-</article>
-{% endif %}
+
 {% if single or not single%}
 <article class="full-post">
     <div class="meta"><p>
-       <span class="comment"><a href="/blog/{{ post.year }}/{{ post.month }}/{{ post.day }}/{{ post.url_title.lower() }}/#comments">Comment</a></span> -
-       <span class="date"><a href="/blog/{{ post.year }}/{{ post.month }}/{{ post.day }}/{{ post.url_title.lower() }}">{{ post.day }}/{{ post.month }}/{{ post.year }}</a></span>
+          <span class="date"><a href="/blog/{{ post.year }}/{{ post.month }}/{{ post.day }}/{{ post.url_title.lower() }}#comments">{{ post.day }}/{{ post.month }}/{{ post.year }}</a></span>
    </p></div>
 
     <h2><a href="/blog/{{ post.year }}/{{ post.month }}/{{ post.day }}/{{ post.url_title.lower() }}">{{ post.title }}</a> </h2>
