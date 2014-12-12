@@ -23,8 +23,8 @@ article img{
     top:5px;
     left:5px;
     background-image:url('/static/media/drag.png');
-    width:40px;
-    height:40px;
+    width:35px;
+    height:35px;
     background-size:cover;
 }
 
@@ -39,7 +39,7 @@ nav a{
     display: block;
     margin-top:3px;
     text-align:left;
-    font-size:20px;
+    font-size:18px;
     padding-left:25px;
     background-image:url('/static/media/arrow-right-b.png');
     background-repeat:no-repeat;
@@ -115,12 +115,12 @@ header{
 #profile{
     float:left;
     margin:0px;
-    margin-left:60px;
+    margin-left:50px;
     display:block;
 }
 #profile p{
-    font-size:23px;
-    line-height:30px;
+    font-size:20px;
+    line-height:25px;
     margin:0px; 
 }
 
@@ -137,6 +137,6 @@ header{
 
 #main{
     margin:0px 1%;
-    margin-top:50px;
+    margin-top:60px;
     width:98%;
 }
