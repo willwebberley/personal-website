@@ -1,6 +1,16 @@
 {% extends "layout.html" %}
 {% block body %}
 
+<div class="item" id="contents">
+    <h3>On this page</h3>
+    <ul>
+        <li><a href="#current">Current research</a></li>
+        <li><a href="#phd">PhD</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#talks">Talks</a></li>
+    </ul>
+</div>
+
 <section class="small">
     <h2 id="current">Current research</h2>
     <p>I am currently involved with a couple of research projects as a research associate at the <a href="http://cs.cf.ac.uk" target="_blank">School of Computer Science &amp Informatics</a>, <a href="http://cf.ac.uk" target="_blank">Cardiff University</a>.
@@ -36,7 +46,7 @@
 </section>
 
 <section class="small">
-	<h2>Peer-reviewed publications</h2>
+	<h2 id="publications">Peer-reviewed publications</h2>
     <div class="item">		
         <h3>Inferring the Interesting Tweets in Your Network</h3>
         <p>Will Webberley, Stuart M. Allen, Roger M. Whitaker. In <i>Third International Conference on Cloud and Green Computing (CGC)</i>. Karlsruhe, Germany. September 2013.
@@ -72,7 +82,7 @@
 	<p><a class="download" href="/static/downloads/poster_day_2011.pdf" target="_blank">Download</a></p>
     </div>
 
-	<h2>Research talks</h2>
+	<h2 id="talks">Research talks</h2>
 
     <div class="item">
     <h3>Inferring the interesting Tweets in your network</h3>

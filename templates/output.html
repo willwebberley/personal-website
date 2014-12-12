@@ -1,10 +1,17 @@
 {% extends "layout.html" %}
 
 {% block body %}
+<div class="item" id="contents">
+    <h3>On this page</h3>
+    <ul>
+        <li><a href="#talks">Talks</a></li>
+        <li><a href="#articles">Articles</a></li>
+    </ul>
+</div>
+
 <section class="small">
-	<h2>Talks</h2>
-	
-	<p>For research-based talks, please see <a href="/research">research</a>.
+	<h2 id="talks">Talks</h2>
+	<p>For research-based talks, please see <a href="/research#talks">research</a>.
 
     <div class="item">	
     <h3>Making the Best Open-Source Contributions</h3>
@@ -46,8 +53,7 @@
 </section>
 
 <section class="small">
-    <h2>Articles</h2>
-    <p>Any of my relevant articles will be available below.</p>
+    <h2 id="articles">Articles</h2>
     <div class="item">
         <h3>Direct to S3 File Uploads in Node.js</h3>
         <p><label>Published by</label><a href="https://www.heroku.com" target="_blank">Heroku</a></p>

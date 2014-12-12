@@ -22,6 +22,7 @@ header{
 	position:relative;
 	width:100%;
 	background:url('/static/media/header-bg.png');
+    background:rgb(220,220,220);
 }
 
 #main{
@@ -168,7 +169,8 @@ hr{
     color:#AAA;
 }
 .small-image{
-    width:400px;
+    width:400px;    
+    max-width:100%;
     margin-bottom:10px;
 }
 
@@ -183,6 +185,7 @@ pre{
     font-size:11px;
     padding:4px;
     background:rgb(240,240,240);
+    word-wrap:break-word;
 }
 
 ul{
@@ -211,10 +214,16 @@ label{
     color:#aaa;
 }   
 
-
+#contents{
+    display:none;
+}
 
  
 /* HEADER STUFF */
+
+#nav_opener{
+    display:none;
+}
 
 #profile{
     float:left;
@@ -229,19 +238,17 @@ label{
     font-size:12px;
     line-height:18px;
     color:#ccc;
-    text-shadow:2px 2px 3px black;
 }
 
 #profile p:first-child{
     font-size:20px;
     margin-bottom:7px;
-    color:white;
 }
 #profile p:first-child a:link{
-    color:white;
+    color:rgb(100,100,100);
 }
 #profile p:first-child a:visited{
-    color:white;
+    color:rgb(100,100,100);
 }
 #profile p:first-child a.active{
     color:#00BFFF;
@@ -265,106 +272,18 @@ nav a{
     text-align:center;
     padding:5px;
     border-radius:4px;
-    font-family:'Courier New', 'Courier';
+    font-family:'Courier', 'monospace';
 }
-nav a:link{color:white;text-decoration:none;}
-nav a:visited{color:white;text-decoration:none;}
-nav a:hover{color:white;}
-
+nav a:link{color:black;text-decoration:none;}
+nav a:visited{color:black;text-decoration:none;}
+nav a:hover{color:black;}
 nav a.active{
     color:#00BFFF;
 }
 
-#lastfm{
+#social_nav{
     display:none;
-    opacity:0.0;
-    width:80%;
-    background: url('/static/media/listening.png') rgba(0,0,0,0.1);
-    background-repeat:no-repeat;
-    background-size:25px auto;
-    background-position:200px 8px;
-    border-radius:20px;
-    margin:20px auto;
-    margin-bottom:0px;
-    padding-bottom:5px;
-    overflow:hidden;
 }
-
-#lastfm #songs .song{
-    display:block;
-    width:96%;
-    margin:5px 0px;
-    padding-bottom:8px;
-    padding-top:5px;
-    padding-left:2%;
-    padding-right:2%;
-    border-bottom:1px solid rgba(250,250,250,0.1);
-    cursor:pointer;
-}
-
-#lastfm #songs .song.now-playing{
-    padding-left:10%;
-    width:68%;
-    background:url('http://cdn.last.fm/flatness/global/icon_eq.gif') rgba(250,250,250,0.1);;
-    background-repeat:no-repeat;
-    background-position:5px center;
-    border:none;
-    padding-top:5px;
-    margin-top:0px;
-    border-radius:20px 20px 0px 0px;
-}
-
-#lastfm #songs .song.not-now-playing:hover{
-   background:rgba(250,250,250,0.2);
-    border-bottom:1px solid rgba(250,250,250,0.0);
-}
-
-#lastfm #songs .song .title{
-    color:#00BFFF;
-    font-size:10px;
-    line-height:16px;
-    display:block;
-    clear:both;
-}
-
-#lastfm #songs .song .artist{
-    color:#bbb;
-    font-size:9px;
-    font-style:italic; 
-    float:left;
-}
-
-#lastfm #songs .song .time{
-    color:#bbb;
-    font-size:9px;
-    margin-left:6px;
-    float:right;
-}
-
-
-
-/* FOOTER STUFF */
-.social{
-    width:40px;
-    margin:4px;
-}
-
-footer .social{
-    opacity:0.3;
-}
-.social.contact{
-    opacity:0.9;
-}
-.social.bg{
-    background:white;
-}
-.social.dark-bg{
-    background:#ccc;
-}
-#copyright{
-    color:gray;
-}
-
 
 
 /* HOME STUFF */
@@ -400,9 +319,7 @@ p.github{background-image:url('/static/media/social-github-outline.png');}
 div.social{
     clear:both;
     margin:5px 0px;
-    margin-left:5%;
     height:30px;
-    width:95%;
     line-height:30px;
     padding-left:40px;
     background-size:30px 30px;
@@ -418,8 +335,8 @@ div.social.lastfm{background-image:url('/static/media/social-lastfm-outline.png'
 div.social.lastfm:hover{background-image:url('/static/media/social-lastfm.png');}
 div.social.linkedin{background-image:url('/static/media/social-linkedin-outline.png');}
 div.social.linkedin:hover{background-image:url('/static/media/social-linkedin.png');}
-div.social.instagram{background-image:url('/static/media/social-instagram-outline.png');background-size:25px 25px;background-position:2px center;}
-div.social.instagram:hover{background-image:url('/static/media/social-instagram.png');background-size:25px 25px;background-position:2px center;}
+div.social.instagram{background-image:url('/static/media/social-instagram-outline.png');}
+div.social.instagram:hover{background-image:url('/static/media/social-instagram.png');}
 
 
 /* BLOG STUFF */

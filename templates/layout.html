@@ -15,6 +15,7 @@
 
 <body>
 <header>
+    <div id="nav_opener" onclick="if(document.getElementsByTagName('nav')[0].style.display!='block'){document.getElementsByTagName('nav')[0].style.display='block';}else{document.getElementsByTagName('nav')[0].style.display='none';}"></div>
 	<div id="profile">
         <p><a href="/" {% if 'home' == request.endpoint%}class="active"{% endif %}>Will Webberley</a></p>
     </div>
@@ -26,6 +27,23 @@
         <a href="/output" {% if 'output' == request.endpoint %}class="active"{% endif %}>output</a>
         <a href="/project" {% if 'project' == request.endpoint %}class="active"{% endif %}>project</a>
         <a href="/contact" {% if 'contact' == request.endpoint %}class="active"{% endif %}>contact</a>
+        <div id="social_nav">
+            <a href="https://twitter.com/flyingsparx" target="_blank">
+                <img src="/static/media/social-twitter-outline.png" />
+            </a>
+            <a href="https://instagram.com/flyingsparx" target="_blank">
+                <img src="/static/media/social-instagram-outline.png" />
+            </a>
+            <a href="http://last.fm/user/flyingsparks" target="_blank">
+                <img src="/static/media/social-lastfm-outline.png" />
+            </a>
+            <a href="https://github.com/flyingsparx" target="_blank">
+                <img src="/static/media/social-github-outline.png" />
+            </a>
+            <a href="https://www.linkedin.com/profile/view?id=211829090" target="_blank">
+                <img src="/static/media/social-linkedin-outline.png" />
+            </a>
+        </div>
     </nav>
     <div class="clear"></div>
 </header>
