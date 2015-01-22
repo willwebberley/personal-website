@@ -10,6 +10,81 @@
 </div>
 
 <section class="small">
+
+    <h2>Recent projects</h2>
+
+    <p>Some current and recent software projects carried out in my spare time. Most software here is free and open source, and some are just hacked together to fulfil a one-off purpose.</p>
+
+    <div class="item">
+    <h3>Gower Tides</h3>
+    <p>Current version: 1.4</p>
+    <p><a class="source" href="https://github.com/flyingsparx/GowerTides" target="_blank">View source</a></p>
+    <p><a class="view" href="https://play.google.com/store/apps/details?id=net.willwebberley.gowertides" target="_blank">View on Google Play</a></p>
+    <p><span class="tags">Android, Java, surf API, weather API, visualisation</span></p>
+    <p>An Android app for displaying tidal and weather data for the Gower Peninsula in South Wales. Differentiates from other similar tide applications since the calculations are made offline, which is useful due to limited data services in some areas of the Gower.</p>
+    <p>Also displays the surf data for a selection of four Gower locations.</p>
+    </div>
+
+    <div class="item">
+    <h3>CasaStream</h3>
+    <p>Current version: 1.0</p>
+    <p><a class="source" href="https://github.com/flyingsparx/CasaStream" target="_blank">Project home</a></p>
+    <p><span class="tags"></label>Python, music streaming, PulseAudio</p>
+    <p>A system designed to support zoned music streaming around the home. In particular, allows music playing from one 'Master' server to be played simultaneously by other networked CasaStream servers. Once running, a user can choose which sound sources (applications) to stream and which devices should receive and playback the stream.</p>
+    <p>Whilst effectively just a wrapper for PulseAudio and VLC, it is designed to be mostly zeroconf, self-organising, self-detecting and easy to deploy.</p>
+    </div>
+
+    <div class="item">
+    <h3>WekaPy</h3>
+    <p>Current version: 1.2</p>
+    <p><a class="download" href="https://raw.github.com/flyingsparx/WekaPy/master/wekapy.py" target="_blank">Download current version</a></p>
+    <p><a class="source" href="https://github.com/flyingsparx/WekaPy" target="_blank">Project home</a></p>
+    <p><span class="tags"></label>Python, machine learning</p>
+    <p>A Python wrapper for the Weka machine-learning toolkit. Currently supports training a variety of different classifier types and testing (making predictions) against trained models. The library supports use of ARFF files or more programmatic use (as demonstrated in the repo's <a href="https://github.com/flyingsparx/WekaPy#example-usage" target="_blank">README</a>). Provides a set of useful classes for handling instances and for getting useful information out of the predictions.</p>
+    </div>
+
+    <div class="item">
+    <h3>Pretty in Paint</h3>
+    <p><a class="view" href="http://www.prettyinpaintfurniture.co.uk" target="_blank">View site</a></p>
+    <p><span class="tags">PHP, CSS, HTML5, JavaScript</span></p>
+    <p>A website for publishing furniture for display and sale. The site provides a simple bespoke CMS allowing flexible updates to the site, and also supports a commissioning system, in which potential customers can contact the company and send them images of their ideas for a piece.</p>
+    </div>
+
+    <div class="item">
+    <h3>UWC Apply</h3>
+    <p><a class="view" href="https://www.uwcgbapply.org" target="_blank">View site</a></p>
+    <p><span class="tags">PHP, UWC, CSS, HTML5, JavaScript</span></p>
+    <p>A web application allowing students to register and apply to UWC colleges. Provides a UCAS-style application system where applicants can complete various parts of the application, view their progress pre- and post-submission, pay the application fee, view internal messages, and so on.</p>
+    </div>
+
+    <div class="item">
+    <h3>UK Crime Mashup</h3>
+    <p><a class="source" href="https://github.com/martinjc/digisocial" target="_blank">View source</a></p>
+    <p><a class="view" href="http://ukcrimemashup.nomovingparts.net" target="_blank">View project</a></p>
+    </div>
+
+
+</section>
+
+<section class="small">
+    <h2 id="articles">Articles</h2>
+    <div class="item">
+        <h3>Direct to S3 File Uploads in Node.js</h3>
+        <p><label>Published by</label><a href="https://www.heroku.com" target="_blank">Heroku</a></p>
+        <p><label>Publish date</label>15th March 2014</p>
+        <p><span class="view"><a href="https://devcenter.heroku.com/articles/s3-upload-node" target="_blank">View article</a></span></p>
+        <p><span class="tags">Heroku, Node, JavaScript, Amazon S3</span></p>
+        <p>An article for Heroku's <a href="https://devcenter.heroku.com/" target="_blank">Dev Center</a> covering the exactly the same procedure as the Pyhon article, but using Node!</p>
+    </div>
+    <div class="item">
+        <h3>Direct to S3 File Uploads in Python</h3>
+        <p><label>Published by</label><a href="https://www.heroku.com" target="_blank">Heroku</a></p>
+        <p><label>Publish date</label>7th May 2013</p>
+        <p><span class="view"><a href="https://devcenter.heroku.com/articles/s3-upload-python" target="_blank">View article</a></span></p>
+        <p><span class="tags">Heroku, Python, JavaScript, Amazon S3</span></p>
+        <p>An article for Heroku's <a href="https://devcenter.heroku.com/" target="_blank">Dev Center</a> covering a procedure enabling direct-to-S3 uploading using Python running on a signing server. The motivation of the article was to encourage Heroku (and any other) developers to make uploads to Amazon's S3 service, but bypassing any server-side processing. By simply using the server to sign the request and then having JavaScript do the actual legwork in uploading the files, the server is not tied up in processing the file and it will be able to continue responding to any requests made during the upload.</p>
+    </div>
+
 	<h2 id="talks">Talks</h2>
 	<p>For research-based talks, please see <a href="/research#talks">research</a>.
 
@@ -50,26 +125,6 @@
 	<p><a class="download" href="/static/downloads/fts_chrome.pdf" target="_blank">View &amp; download</a></p>
     </div>
 
-</section>
-
-<section class="small">
-    <h2 id="articles">Articles</h2>
-    <div class="item">
-        <h3>Direct to S3 File Uploads in Node.js</h3>
-        <p><label>Published by</label><a href="https://www.heroku.com" target="_blank">Heroku</a></p>
-        <p><label>Publish date</label>15th March 2014</p>
-        <p><span class="view"><a href="https://devcenter.heroku.com/articles/s3-upload-node" target="_blank">View article</a></span></p>
-        <p><span class="tags">Heroku, Node, JavaScript, Amazon S3</span></p>
-        <p>An article for Heroku's <a href="https://devcenter.heroku.com/" target="_blank">Dev Center</a> covering the exactly the same procedure as the Pyhon article, but using Node!</p>
-    </div>
-    <div class="item">
-        <h3>Direct to S3 File Uploads in Python</h3>
-        <p><label>Published by</label><a href="https://www.heroku.com" target="_blank">Heroku</a></p>
-        <p><label>Publish date</label>7th May 2013</p>
-        <p><span class="view"><a href="https://devcenter.heroku.com/articles/s3-upload-python" target="_blank">View article</a></span></p>
-        <p><span class="tags">Heroku, Python, JavaScript, Amazon S3</span></p>
-        <p>An article for Heroku's <a href="https://devcenter.heroku.com/" target="_blank">Dev Center</a> covering a procedure enabling direct-to-S3 uploading using Python running on a signing server. The motivation of the article was to encourage Heroku (and any other) developers to make uploads to Amazon's S3 service, but bypassing any server-side processing. By simply using the server to sign the request and then having JavaScript do the actual legwork in uploading the files, the server is not tied up in processing the file and it will be able to continue responding to any requests made during the upload.</p>
-    </div>
 </section>
 
 
