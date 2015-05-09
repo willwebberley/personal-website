@@ -104,6 +104,5 @@ def updatePost(id, title, text, day, month, year):
 # Delete a currently-existing post
 def deletePost(id):
     post = getPostById(id)
-    sess = Session()
     sess.delete(post)
     sess.commit()

@@ -1,4 +1,4 @@
-from flask import Flask, url_for, render_template, request, session, escape, redirect
+from flask import Flask, url_for, render_template, request, session, escape, redirect, send_file
 import pymongo
 import os,datetime, time, math
 from blog import *
@@ -27,6 +27,10 @@ def check_mobile():
 @app.route('/')
 def home():
     return render_template('home.html')
+
+@app.route('/cv')
+def cv():
+    return send_file('static/downloads/cv.pdf', as_attachment=False, mimetype='application/pdf')
 
 # flyingsparx.net/blog 
 # Get all blog posts and pass to templates for rendering

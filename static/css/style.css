@@ -210,7 +210,7 @@ hr{
 pre{
     margin:0px 20px;
     font-family:'courier-new', 'courier', 'monospace';
-    font-size:11px;
+    font-size:13px;
     padding:4px;
     background:rgb(240,240,240);
     word-wrap:break-word;
@@ -363,10 +363,8 @@ article{
     margin:0px auto;
     margin-top:40px;
     padding-bottom:20px;
-    background:none;
-    box-shadow:0px 0px 10px #ddd;
     border-top:4px solid #00BFFF;
-    border-radius:0px 10px 0px 0px;
+    border-radius:0px 10px 0px 0px; 
 }
 
 article img{
@@ -403,7 +401,7 @@ article h2{
     padding-left:10px;
     margin-bottom:10px;
     text-transform:uppercase;
-    font-size:17px;
+    font-size:25px;
     opacity:0.8;
     display:inline-block;
     border:none;
@@ -440,14 +438,22 @@ article .meta .comment a:visited{color:white;}
 article .meta .comment a:hover{color:black;}
 
 article p{
-    margin:0px 20px;
+    margin:10px auto;
     padding:5px 5px;
     font-size:15px;
     font-weight:light;
     color:rgba(0,0,0,0.7);
+    font-family: 'Droid Serif', serif;
+    display:block;
+    max-width:500px;
+    text-align:justify;
+    text-justify:inner-word;
 }
 article p:first-child{
     margin-top:2px;
+}
+article p *{
+    font-family: 'Droid Serif', serif;
 }
 
 article img{
