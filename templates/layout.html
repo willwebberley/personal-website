@@ -24,7 +24,6 @@
     <nav>
         <a href="/blog" {% if 'blog' == request.endpoint or 'post' == request.endpoint%}class="active"{% endif %}>blog</a>
         <a href="/research" {% if 'research' == request.endpoint %}class="active"{% endif %}>research</a>
-        <a href="/teaching" {% if 'teaching' == request.endpoint %}class="active"{% endif %}>teaching</a>
         <a href="/output" {% if 'output' == request.endpoint %}class="active"{% endif %}>output</a>
         <a href="/contact" {% if 'contact' == request.endpoint %}class="active"{% endif %}>contact</a>
         <div id="social_nav">
