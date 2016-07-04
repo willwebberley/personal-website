@@ -1,5 +1,4 @@
 from flask import Flask, url_for, render_template, request, session, escape, redirect, send_file
-import pymongo
 import os,datetime, time, math
 from blog import *
 import json
@@ -200,6 +199,4 @@ def getBlog():
 
 # Main code
 if __name__ == '__main__':
-    app.debug = True # set to true and server will display any errors to the page
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(port=3001)
