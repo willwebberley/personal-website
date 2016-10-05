@@ -12,7 +12,8 @@ for post in posts:
     if '20' not in year:
       year = '20' + year
     file = open('posts/' + year + '-'+str(post[5])+'-'+str(post[4])+'-'+post[1].lower().replace(' ', '-').replace("'",'').replace(':', '')+'.md', 'w')
-    file.write('---\nyear: '+year+'\nmonth: '+str(post[5])+'\nday: '+str(post[4])+'\ntitle: '+post[1]+'\n---\n\n'+post[2].replace("\r", ""))
+    file.write('---\nyear: '+year+'\nmonth: '+str(post[5])+'\nday: '+str(post[4])+'\ntitle: '+post[1]+'\n---\n\n'+post[2].replace("\r", "").decode("latin1").encode("utf8"))
     file.close()
-  except:
+  except Exception as e:
+    print(e)
     print(post[1])
