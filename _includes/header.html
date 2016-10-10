@@ -8,15 +8,21 @@
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="/node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   </head>
 
   <body>
 
-  <header class="nav-bar">
+  <nav>
+     <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Will Webberley</a>
+         <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/research">Research</a></li>
+            <li><a href="/blog">Blog</a></li>
+        </ul>
+     </div>
+   </nav> 
 
-
-      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-
-
-  </header>
