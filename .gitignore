@@ -1,5 +1,5 @@
-*.pyc
-static/photos/
 *.log
-*.swp
+*.sw*
 .DS_Store
+node_modules/
+_site/
