@@ -48,8 +48,8 @@ layout: default
 
     {% for pub in site.publications reversed %}
     
-    <div class="card teal darken">
-      <div class="card-content white-text">
+    <div class="card">
+      <div class="card-content">
         <p><strong>{{pub.title}}</strong></p><br>
         <p>{{pub.authors}}. In <i>{{pub.journal}}</i>. {{pub.extra}}</p>
       </div>  
@@ -59,6 +59,19 @@ layout: default
     </div>
 
     {% endfor %}
+
+    <h4>Other papers</h4>
+
+    <div class="card grey lighten-4">
+      <div class="card-content">
+        <p><strong>CENode: Enabling Human-Machine Conversations at the Network Edge</strong></p><br>
+        <p>William Webberley, Alun Preece, Dave Braines. <i>ITA Project 2.4</i>. 2015. 
+      </div>  
+      <div class="card-action">
+        <a href="http://cenode.io/intro.pdf"><i class="fa fa-download"></i> Available from CENode website</a>
+      </div>
+    </div>
+
 
   </div>
 
