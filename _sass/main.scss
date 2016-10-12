@@ -1,5 +1,11 @@
 nav{
   background-color: rgb(80,80,80) !important;
+  .brand-logo{
+    margin-left:10px;
+    span{
+      font-size:80%;
+    }
+  }
 }
 
 .container{
@@ -26,9 +32,17 @@ nav{
 article{
   margin-bottom: 70px;
 
+  pre{
+    background:rgb(230,230,230);
+    font-size:12px;
+    padding:10px;
+    margin:10px 20px;
+  }
   img{
     max-width:100%;
     max-height:400px;
+    display:block;
+    margin:20px auto;
     &.left{
       max-width:40%;
       margin: 10px 20px 10px 0px;

@@ -18,6 +18,9 @@ twitter_username: jekyllrb
 github_username:  jekyll
 paginate: 5
 
+collections:
+  - publications
+
 # Build settings
 markdown: kramdown
 gems: [jekyll-paginate]
