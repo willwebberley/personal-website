@@ -1,3 +1,7 @@
+body{
+  background: #fcfcfc;
+}
+
 nav{
   background-color: rgb(80,80,80) !important;
   .brand-logo{
@@ -57,6 +61,14 @@ article{
       max-height:600px;
       display:block;
       margin:20px auto;
+    }
+  }
+}
+
+.collection{
+  .collection-item{
+    .title{
+      font-weight:bold;
     }
   }
 }
