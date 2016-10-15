@@ -5,15 +5,19 @@ layout: default
 <h3>Welcome</h3>
 
 <div class="row">
-  <div class="col l8 m6">
+  <div class="col m8 s12">
     <p>I'm a software engineer and computer scientist interested in a wide range of areas, but particularly around the development of web technologies.</p>
 
-    <p>Professionally I am Chief Technology Officer at <a href="https://simplydo.io" target="_blank">Simply Do Ideas</a>, which provides a platform helping young people to build and realise their entrepreneurial ideas. Unprofessionally I work/tinker on some other home and team projects when I get a chance to.</p>
+    <p>Professionally I am Chief Technology Officer at <a href="https://simplydo.io" target="_blank">Simply Do Ideas</a>, which provides a platform helping young people to build and realise their entrepreneurial ideas. Otherwise I try to work on some other home and team projects when I get a chance to.</p>
 
     <p>Before joining Simply Do Ideas, I was a software engineer at <a href="https://www.chaser.io" target="_blank">Chaser</a> and before that I was a researcher at <a href="http://cf.ac.uk" target="_blank">Cardiff University</a>'s School of <a href="http://cs.cf.ac.uk" target="_blank">Computer Science &amp; Informatics</a>, where I completed my PhD (looking into the 'unfiltered feed' problem in online social networks) and then moved on to join the UK MoD and US Army Research Labs coalition-led <a href="/research#current">ITA project</a>.</p>
 
     <p>Whilst at Cardiff University, I also lectured the Advanced Computer Science MSc module <i>Web &amp; Social Computing</i> and the Computer Science BSc module <i>Human-Computer Interaction</i>.</p>
   </div>
+
+</div>
+
+<div class="row">
 
   <div class="col l4 m6 s12">
     <div class="card-panel teal">
@@ -27,6 +31,29 @@ layout: default
         <h6><i class="fa fa-paper-plane-o"></i> Email me</h6>
         <a href="mailto:will@flyingsparx.net" class="btn btn-flat btn-block">will@flyingsparx.net</a>
       </span>
+    </div>
+  </div>
+
+  <div class="col l4 m6 s12">
+    <div class="card grey lighten-4">
+      <div class="card-content">
+        <span class="card-title">Links</span>
+        <p><a href="/blog"><i class="fa fa-link"></i> Blog</a></p>
+        <p><a href="/project"><i class="fa fa-link"></i> Projects</a></p>
+        <p><a href="/research"><i class="fa fa-link"></i> Research</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col l4 s12">
+    <div class="card grey lighten-4">
+      <div class="card-content">
+        <span class="card-title">Recent posts</span>
+        {% for post in site.posts limit:5 %}
+          <p><a href="{{ post.url }}"><i class="fa fa-file-o"></i> {{ post.title }}</a></p>
+        {% endfor %}
+        <a class="btn btn-block" href="/feed.xml" target="_blank"><I class="fa fa-rss"></i> Subscribe</a>
+      </div>
     </div>
   </div>
 </div>
