@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "jekyll build && tar -czf build.tar.gz _site/* && scp -P 3693 build.tar.gz sites@flyingsparx.net:/home/sites && ssh -p 3693 sites@flyingsparx.net \"cd ~ && tar -xzf build.tar.gz && mv _site flyingsparx\""
   },
   "author": "",
   "license": "ISC",
