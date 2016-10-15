@@ -11,7 +11,8 @@ title: Using Weka in Golang
 
 <p>I started working on <a href="https://github.com/flyingsparx/WekaGo" target="_blank">WekaGo</a>, which is able to programmatically support simple classification tasks within a Go program. It essentially just manages the model, abstracts the generation of <a href="http://www.cs.waikato.ac.nz/ml/weka/arff.html" target="_blank">ARFF</a> files, and executes the necessary Java to make it quick and easy to train and classify data:</p>
 
-<pre class="go">
+{% highlight go %}
+
 model := wekago.NewModel("bayes.BayesNet")
 ...
 model.AddTrainingInstance(train_instance1)
@@ -20,6 +21,7 @@ model.Train()
 model.AddTestingInstance(train_instance1)
 ...
 model.Test()
-</pre>
+
+{% endhighlight %}
 
 <p>Results from the classification can then be examined, as <a href="https://github.com/flyingsparx/WekaGo/blob/master/README.md" target="_blank">described</a>.</p>
