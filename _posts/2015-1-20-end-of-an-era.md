@@ -3,6 +3,7 @@ year: 2015
 month: 1
 day: 20
 title: End of an Era
+layout: post
 ---
 
 <p>I recently received confirmation of my completed PhD! I submitted my thesis in May 2014, passed my viva in September and returned my final corrections in December.</p>

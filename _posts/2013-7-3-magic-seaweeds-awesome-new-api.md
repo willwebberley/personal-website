@@ -3,6 +3,7 @@ year: 2013
 month: 7
 day: 3
 title: Magic Seaweed's Awesome New API
+layout: post
 ---
 
 <p>Back in March, I emailed <a href="http://magicseaweed.com" target="_blank">Magic Seaweed</a> to ask them if they had a public API for their surf forecast data. They responded that they didn't at the time, but that it was certainly on their to-do list. I am interested in the marine data for my <a href="https://play.google.com/store/apps/details?id=net.willwebberley.gowertides" target="_blank">Gower Tides</a> application.</p>

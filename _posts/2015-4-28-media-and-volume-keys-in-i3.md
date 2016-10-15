@@ -3,6 +3,7 @@ year: 2015
 month: 4
 day: 28
 title: Media and volume keys in i3
+layout: post
 ---
 
 <p>As is the case with many people, all music I listen to on my PC these days plays from the web through a browser. I'm a heavy user of Google Play Music and SoundCloud, and using Chrome to handle everything means playlists and libraries (and the way I use them through extensions) sync up properly everywhere I need them.</p>

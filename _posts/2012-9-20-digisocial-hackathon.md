@@ -3,6 +3,7 @@ year: 2012
 month: 9
 day: 20
 title: DigiSocial Hackathon
+layout: post
 ---
 
 <p>
@@ -12,7 +13,7 @@ Computer Science and Social Sciences and was organised by myself and a few other
 
 <p>The website for the event is hosted <a href="http://users.cs.cf.ac.uk/W.M.Webberley/digisocial/" target="_blank">here</a>.</p>
 
-<img src="/static/blog-media/digisocial_logo.png" alt="DigiSocial logo" class="blog-image"/>
+<img src="/media/blog/digisocial_logo.png" alt="DigiSocial logo" class="blog-image"/>
 
 <p>The idea of the event was to try and encourage further ties between the different Schools of the University. The
 University Graduate College (UGC) provide the funding for these events, which must be applied for, in the hope

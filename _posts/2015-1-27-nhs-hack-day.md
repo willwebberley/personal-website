@@ -3,16 +3,17 @@ year: 2015
 month: 1
 day: 27
 title: NHS Hack Day
+layout: post
 ---
 
 <p>This weekend I took part in the <a href="http://nhshackday.com" target="_blank">NHS Hack Day</a>. The idea of the event is to bring healthcare professionals together with technology enthusiasts in order to build stuff that is useful for those within the NHS and for those that use it. It was organised by <a href="https://twitter.com/amcunningham" target="_blank">AnneMarie Cunningham</a>, who did a great job in making the whole thing run smoothly!</p>
 
-<img src="https://flyingsparx.net/static/blog-media/nhshackday2.jpg" class="large-image blog-image" />
+<img src="/media/blog/nhshackday2.jpg" class="large-image blog-image" />
 <p class="small">This was our team! The image is released under a Creative Commons BY-NC2.0 license by <a href="https://www.flickr.com/photos/paul_clarke" target="_blank">Paul Clarke</a>.</p>
 
 <p>I was asked to go along and give a hand by <a href="http://martinjc.com" target="_blank">Martin</a>, who also had four of his MSc students with him. <a href="http://mattjw.net" target="_blank">Matt</a>, previously from <a href="http://cs.cf.ac.uk" target="_blank">Cardiff CS&I</a>, also came to provide his data-handling expertise.</p>
 
-<img src="https://flyingsparx.net/static/blog-media/nhshackday.png" class="large-image blog-image" />
+<img src="/media/blog/nhshackday.png" class="large-image blog-image" />
 
 <p>We built a webapp, called <a href="http://compjcdf.github.io/nhs_hack/app.html" target="_blank">Health Explorer Wales</a>, that attempts to visualise various data for health boards and communities in Wales. One of the main goals of the app was to make it maintainable, so that users in future could easily add their own geographic or numeric data to visualise. For this, it was important to decide on an extensible <a href="https://github.com/CompJCDF/nhs_hack/blob/master/data/descriptors.json" target="_blank">data schema</a> for describing data, and suitable data formats.</p>
 

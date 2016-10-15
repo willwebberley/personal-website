@@ -3,6 +3,7 @@ year: 2015
 month: 5
 day: 1
 title: Using Weka in Golang
+layout: post
 ---
 
 <p>A couple of years ago I wrote a <a href="https://flyingsparx.net/blog/13/6/12/wekapy" target="_blank">blog post</a> about wrapping some of <a href="http://www.cs.waikato.ac.nz/ml/weka" target="_blank">Weka</a>'s classification functionality to allow it to be used programmatically in Python programs. A small project I'm currently working on at home is around taking some of the later research from my PhD work to see if it can be expressed and used as a simple web-app.</p>

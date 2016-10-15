@@ -3,6 +3,7 @@ year: 2013
 month: 4
 day: 16
 title: Trials of Eduroam
+layout: post
 ---
 
 <p>

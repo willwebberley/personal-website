@@ -3,6 +3,7 @@ year: 2013
 month: 3
 day: 6
 title: Deploying to Heroku
+layout: post
 ---
 
 <p>In my <a href="http://www.willwebberley.net/#post/2013-02-21" target="_blank">last post</a>, I

@@ -3,6 +3,7 @@ year: 2015
 month: 2
 day: 18
 title: Web and Social Computing
+layout: post
 ---
 
 <p>This week I begin lecturing a module for <a href="http://cs.cf.ac.uk" target="_blank">Cardiff School of Computer Science and Informatics</a>' postgraduate MSc course in <a href="http://courses.cardiff.ac.uk/postgraduate/course/detail/p071.html" target="_blank">Advanced Computer Science</a>.</p>

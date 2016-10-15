@@ -3,6 +3,7 @@ year: 2014
 month: 1
 day: 28
 title: Seminar at King's College London
+layout: post
 ---
 
 <p>Last week, I was invited to give a seminar to the Agents and Intelligent Systems group in the <a href="http://www.kcl.ac.uk/nms/depts/informatics/index.aspx" target="_blank">Department of Informatics</a> at King's College London.</p>

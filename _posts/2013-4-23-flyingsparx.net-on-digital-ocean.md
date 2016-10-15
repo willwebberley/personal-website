@@ -3,6 +3,7 @@ year: 2013
 month: 4
 day: 23
 title: flyingsparx.net On Digital Ocean
+layout: post
 ---
 
 <p>My hosting for <a href="http://www.willwebberley.net" target="_blank">willwebberley.net</a> has nearly expired, so I have been looking for renewal options.</p>

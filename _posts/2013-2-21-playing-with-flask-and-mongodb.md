@@ -3,6 +3,7 @@ year: 2013
 month: 2
 day: 21
 title: Playing with Flask and MongoDB
+layout: post
 ---
 
 <p>

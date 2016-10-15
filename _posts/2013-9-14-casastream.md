@@ -3,6 +3,7 @@ year: 2013
 month: 9
 day: 14
 title: CasaStream
+layout: post
 ---
 
 <p>In my <a href="http://flyingsparx.net/blog/2013/9/2/zoned-network-sound-streaming-the-problem" target="_blank">last post</a> I discussed methods for streaming music to different zones in the house. More specifically I wanted to be able to play music from one location and then listen to it in other rooms at the same time and in sync.</p>
@@ -11,11 +12,11 @@ title: CasaStream
 
 <p>To streamline the procedure of compressing the stream, broadcasting the stream, and receiving and playing the stream, I have started a project to create an easily-deployable wrapper around PulseAudio and VLC. The system, somewhat cheesily named <a href="https://github.com/flyingsparx/CasaStream" target="_blank">CasaStream</a> and currently written primarily in Python, relies on a network containing one machine running a CasaStream Master server and any number of machines running a CasaStream Slave server.</p>
 
-<img src="https://flyingsparx.net/static/blog-media/casastream1.png" class="large-image blog-image" />
+<img src="/media/blog/casastream1.png" class="large-image blog-image" />
 
 <p>The Master server is responsible for compressing and broadcasting the stream, and the Slaves receive and play the stream back through connected speakers. Although the compression is relatively resource-intensive (at least, for the moment), the Slave server is lightweight enough to be run on low-powered devices, such as the Raspberry Pi. Any machine that is powerful enough to run the Master could also simultaneously run a Slave, so a dedicated machine to serve the music alone is not required.</p>
 
-<img src="https://flyingsparx.net/static/blog-media/casastream2.png" class="blog-image" />
+<img src="/media/blog/casastream2.png" class="blog-image" />
 
 <p>The Master server also runs a web interface, allowing enabling of the system and to disable and enable Slaves. Slave servers are automatically discovered by the Master, though it is possible to alter the scan range from the web interface also. In addition, the selection of audio sources to stream (and their output volumes) and the renaming of Slaves are available as options. Sound sources are usually automatically detected by PulseAudio (if it is running), so there is generally no manual intervention required to 'force' the detection of sources.</p>
 

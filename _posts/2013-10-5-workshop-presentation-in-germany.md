@@ -3,6 +3,7 @@ year: 2013
 month: 10
 day: 5
 title: Workshop Presentation in Germany
+layout: post
 ---
 
 <p>Last week I visited Karlsruhe, in Germany, to give a presentation accompanying a recently-accepted paper. The paper, "Inferring the Interesting Tweets in Your Network", was in the proceedings of the Workshop on Analyzing Social Media for the Benefit of Society (<a href="http://www.cs.cf.ac.uk/cosmos/node/12" target="_blank">Society 2.0</a>), which was part of the Third International Conference on Social Computing and its Applications (<a href="http://socialcloud.aifb.uni-karlsruhe.de/confs/SCA2013/" target="_blank">SCA</a>).</p>

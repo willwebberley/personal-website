@@ -3,6 +3,7 @@ year: 2013
 month: 7
 day: 31
 title: Gower Tides v1.4
+layout: post
 ---
 
 <img src="https://flyingsparx.net/static/media/v1-4_surf.png" class="blog-image" alt="Surf forecasts" />

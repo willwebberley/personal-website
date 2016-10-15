@@ -3,6 +3,7 @@ year: 2013
 month: 4
 day: 11
 title: Cardiff Open Sauce Hackathon
+layout: post
 ---
 
 <p>

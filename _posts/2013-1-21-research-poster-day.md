@@ -3,6 +3,7 @@ year: 2013
 month: 1
 day: 21
 title: Research Poster Day
+layout: post
 ---
 
 <p>

@@ -3,6 +3,7 @@ year: 2013
 month: 5
 day: 26
 title: Gower Tides Open-Sourced
+layout: post
 ---
 
 <p>This is just a quick post to mention that I have made the source for the <a href="https://play.google.com/store/apps/details?id=net.willwebberley.gowertides" target="_blank">Gower Tides</a> app on Google Play public.</p>

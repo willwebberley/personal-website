@@ -3,6 +3,7 @@ year: 2013
 month: 3
 day: 7
 title: Gower Tides App Released
+layout: post
 ---
 
 <a href="https://play.google.com/store/apps/details?id=net.willwebberley.gowertides">

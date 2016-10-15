@@ -3,6 +3,7 @@ year: 2014
 month: 3
 day: 26
 title: Talk on Open-Source Contribution
+layout: post
 ---
 
 <p>Today I gave an internal talk at the School of Computer Science & Informatics about open-source contribution.</p>

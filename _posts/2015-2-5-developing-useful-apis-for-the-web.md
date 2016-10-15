@@ -3,6 +3,7 @@ year: 2015
 month: 2
 day: 5
 title: Developing Useful APIs for the Web
+layout: post
 ---
 
 <p>Yesterday, I gave a talk about my experiences with developing and using RESTful APIs, with the goal of providing tips for structuring such interfaces so that they work in a useful and sensible way.</p>

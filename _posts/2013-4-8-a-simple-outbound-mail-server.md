@@ -3,6 +3,7 @@ year: 2013
 month: 4
 day: 8
 title: A simple outbound mail server
+layout: post
 ---
 
 <p>

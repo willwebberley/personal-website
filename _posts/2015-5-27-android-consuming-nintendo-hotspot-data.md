@@ -6,7 +6,7 @@ title: "Android: Consuming Nintendo Hotspot Data"
 layout: post
 ---
 
-<img src="https://flyingsparx.net/static/blog-media/android-hotspot.png" class="left">
+<img src="/media/blog/android-hotspot.png" class="left">
 
 <p>I recently <a href="https://flyingsparx.net/blog/2015/5/12/nintendos-hotspot-api" target="_blank">blogged about</a> Nintendo Hotspot data and mentioned it could be more usefully consumable in a native mobile app.</p>
 

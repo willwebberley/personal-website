@@ -3,6 +3,7 @@ year: 2013
 month: 6
 day: 20
 title: Accidental Kernel Upgrades on Digital Ocean
+layout: post
 ---
 
 <p>I today issued a full upgrade of the server at flyingsparx.net, which is hosted by <a href="https://www.digitalocean.com" target="_blank">Digital Ocean</a>. By default, on Arch, this will upgrade every currently-installed package (where there is a counterpart in the official repositories), including the Linux kernel and the kernel headers.</p>

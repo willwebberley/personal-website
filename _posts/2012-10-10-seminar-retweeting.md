@@ -3,6 +3,7 @@ year: 2012
 month: 10
 day: 10
 title: "Seminar: Retweeting"
+layout: post
 ---
 
 <p>

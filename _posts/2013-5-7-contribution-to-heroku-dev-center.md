@@ -3,6 +3,7 @@ year: 2013
 month: 5
 day: 7
 title: Contribution to Heroku Dev Center
+layout: post
 ---
 
 <p>The <a href="https://devcenter.heroku.com" target="_blank">Heroku Dev Center</a> is a repository of guides and articles to provide support for those writing applications to be run on the <a href="https://heroku.com" target="_blank">Heroku</a> platform.</p>

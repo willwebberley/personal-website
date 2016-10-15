@@ -3,9 +3,10 @@ year: 2012
 month: 11
 day: 13
 title: Delving into Android
+layout: post
 ---
 
-<img src="/static/blog-media/tides-main.png" alt="Tides Main Activity" class="blog-image"/>
+<img src="/media/blog/tides-main.png" alt="Tides Main Activity" class="blog-image"/>
 <p>
 I've always been interested in the development of smartphone apps, but have never really had the opportunity
 to actually hava a go. Whilst I'm generally OK with development on platforms I feel comfortable with, I've always
@@ -26,7 +27,7 @@ the data reception is very poor in his area.</p>
 
 <p>I got to work on setting up a database of tidal data, based around the location he surfs in, and creating a basic UI in which to display it. 
 When packaging the application with an existing SQLite database, this <a href="https://github.com/jgilfelt/android-sqlite-asset-helper" target="_blank">helper class</a> was particularly useful.</p>
-<img src="/static/blog-media/tides-settings.png" alt="Tides Settings Activity" class="blog-image"/>
+<img src="/media/blog/tides-settings.png" alt="Tides Settings Activity" class="blog-image"/>
 <p>
 A graphical UI seemed the best approach for displaying the data, so I 
 tried <a href="http://androidplot.com/" target="_blank">AndroidPlot</a>, a highly-customisable graphing

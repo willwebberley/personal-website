@@ -3,6 +3,7 @@ year: 2014
 month: 1
 day: 17
 title: Direct-to-S3 Uploads in Node.js
+layout: post
 ---
 
 <p>A while ago I wrote an <a href="https://devcenter.heroku.com/articles/s3-upload-python" target="_blank">article</a> for <a href="https://heroku.com" target="_blank">Heroku</a>'s Dev Center on carrying out direct uploads to S3 using a Python app for signing the PUT request. Specifically, the article focussed on Flask but the concept is also applicable to most other Python web frameworks.</p>

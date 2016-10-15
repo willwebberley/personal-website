@@ -3,6 +3,7 @@ year: 2012
 month: 10
 day: 31
 title: SocialShower
+layout: post
 ---
 
 <p>
@@ -10,7 +11,7 @@ A few weeks ago I wrote some PHP scripts that can retrieve some of your social i
 scripts could easily be modified to return JSON or XML instead). When styled, they can produce effects similar to those on the Contact
 page of this website (<a href="#contact">here</a>).</p>
 
-<img src="/static/blog-media/socialshower_image.png" alt="SocialShower" class="blog-image"/>
+<img src="/media/blog/socialshower_image.png" alt="SocialShower" class="blog-image"/>
 
 <p>Currently they are available for retrieving recent tweets from Twitter, recent listens from Last.fm and recent uploads to Picasa Web 
 Albums.</p>

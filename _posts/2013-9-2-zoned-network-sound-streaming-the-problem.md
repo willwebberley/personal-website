@@ -3,6 +3,7 @@ year: 2013
 month: 9
 day: 2
 title: "Zoned Network Sound-Streaming: The Problem"
+layout: post
 ---
 
 <p>For a while, now, I have been looking for a reliable way to manage zoned music-playing around the house. The general idea is that I'd like to be able to play music from a central point and have it streamed over the network to a selection of receivers, which could be remotely turned on and off when required, but still allow for multiple receivers to play simulataneously.</p>
