@@ -2,5 +2,6 @@
 *.sw*
 .DS_Store
 node_modules/
+.sass-cache/
 _site/
 build.tar.gz
