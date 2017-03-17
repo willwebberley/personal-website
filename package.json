@@ -2,13 +2,11 @@
   "name": "flyingsparx.net",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "jekyll serve",
-    "deploy": "jekyll build && tar -czf build.tar.gz _site/* && scp build.tar.gz willwebberley@flyingsparx.net:/home/willwebberley && ssh willwebberley@flyingsparx.net \"cd ~ && tar -xzf build.tar.gz && rm -rf flyingsparx && mv _site flyingsparx\""
+    "deploy": "jekyll build && gsutil cp -m -r _site/* gs://flyingsparx.net/"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Will Webberley",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.6.3",
