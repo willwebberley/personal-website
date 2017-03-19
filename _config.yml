@@ -2,8 +2,8 @@ title: Will Webberley
 baseurl: "" # the subpath of your site, e.g. /blog
 paginate: 5
 paginate_path: "/blog/page/:num/"
-permalink: blog/:year/:month/:day/:title
-exclude: [build.tar.gz, deploy, package.json]
+permalink: pretty
+exclude: [package.json, Gemfile, Gemfile.lock, _config.yml]
 
 collections:
   - publications

@@ -4,11 +4,7 @@
   "description": "",
   "scripts": {
     "start": "jekyll serve",
-    "deploy": "jekyll build && gsutil cp -m -r _site/* gs://flyingsparx.net/"
+    "deploy": "jekyll build && gsutil cp -r _site/* gs://flyingsparx.net/"
   },
-  "author": "Will Webberley",
-  "dependencies": {
-    "font-awesome": "^4.6.3",
-    "materialize-css": "^0.97.7"
-  }
+  "author": "Will Webberley"
 }
