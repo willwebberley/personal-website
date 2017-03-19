@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "jekyll serve",
-    "deploy": "jekyll build && gsutil cp -r _site/* gs://flyingsparx.net/"
+    "deploy": "jekyll build && gsutil -m rsync -d -r _site/* gs://flyingsparx.net/"
   },
   "author": "Will Webberley"
 }
