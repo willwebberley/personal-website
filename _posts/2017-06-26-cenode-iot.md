@@ -9,7 +9,7 @@ I have a few [Philips Hue](http://www2.meethue.com/en-US) bulbs at home, and the
 
 A working example of the concepts in this post is available [on GitHub](https://github.com/flyingsparx/CENode-IoT) (as a small webapp) and here's a short demo video (which includes a speech-recognition component):
 
-<iframe src="https://player.vimeo.com/video/223169323" width="640" height="480" style="margin:20px auto;display:block;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/223169323" width="640" height="480" style="margin:20px auto;display:block; max-width: 100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 The first step was to [generate a username for the Bridge](https://developers.meethue.com/documentation/configuration-api#71_create_user), which CENode can use to authenticate requests through the API.
 
