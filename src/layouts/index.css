@@ -57,3 +57,12 @@ h4 {
 p {
   margin: 0px 0px 15px 0px;
 }
+
+article{
+  margin:30px 0px;
+}
+
+article img{
+  max-width:100%;
+  margin:40px 0px;
+}
