@@ -6,7 +6,7 @@ title: A rather French week
 layout: post
 ---
 
-<p>I recently spent a week in France as part of a holiday with some of my family. Renting houses for a couple of weeks in France or Italy each summer has almost become a bit of a tradition, and it's good to have a relax and a catch-up for a few days. They have been the first proper few days (other than the <a href="http://flyingsparx.net/blog/13/3/30/a-bit-of-light-construction-on-an-easter-weekend/" target="_blank">decking-building adventure</a> back in March) I have had away from University in 2013, so I felt it was well-deserved!</p>
+<p>I recently spent a week in France as part of a holiday with some of my family. Renting houses for a couple of weeks in France or Italy each summer has almost become a bit of a tradition, and it's good to have a relax and a catch-up for a few days. They have been the first proper few days (other than the <a href="http://will.now.sh/blog/13/3/30/a-bit-of-light-construction-on-an-easter-weekend/" target="_blank">decking-building adventure</a> back in March) I have had away from University in 2013, so I felt it was well-deserved!</p>
 
 <img src="/media/blog/french-house.JPG" class="large-image blog-image" />
 

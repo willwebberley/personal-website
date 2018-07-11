@@ -7,7 +7,7 @@ I have recently [posted about CENode](/2017/06/22/cenode/) and how it might be [
 
 Since CENode is partially designed to communicate directly with humans (particularly those out and about or "in the field") it makes sense for inputs and queries to be provided via voice in addition to or instead of a text interface. Whilst this has been explored in the browser (including in the [previous Philips Hue control demo](/2017/06/26/cenode-iot/)), it made sense to also try to leverage the Alexa voice service to interact with a CENode instance.
 
-The [Alexa Voice Service](https://developer.amazon.com/alexa-voice-service) and [Alexa Skills Kit](https://developer.amazon.com/alexa-skills-kit) are great to work with, and it was relatively straight forward to create a skill to communicate with CENode's [RESTful API](https://github.com/flyingsparx/CENode/wiki/CEServer-Usage).
+The [Alexa Voice Service](https://developer.amazon.com/alexa-voice-service) and [Alexa Skills Kit](https://developer.amazon.com/alexa-skills-kit) are great to work with, and it was relatively straight forward to create a skill to communicate with CENode's [RESTful API](https://github.com/willwebberley/CENode/wiki/CEServer-Usage).
 
 The short video below demonstrates this through using an Amazon Echo to interact with a standard, non-modified CENode instance running on [CENode Explorer](http://explorer.cenode.io) that is partly pre-loaded with the "space" scenario used in our main [CENode demo](http://cenode.io/demo/index.html). The rest of the post discusses the implementation and challenges.
 
@@ -35,4 +35,4 @@ At this stage, the AWS Lambda function handling the intent makes a standard HTTP
 
 <img src="/media/blog/cenode-alexa.png" style="width:100%;max-width:620px;max-height:none;height:auto;">
 
-The skill has not yet been published to the Alexa skills store for general use, but the code for this project, including the Alexa Skills Kit configuration and the AWS Lambda code (written using their Node environment) is [available on GitHub](https://github.com/flyingsparx/cenode-alexa).
+The skill has not yet been published to the Alexa skills store for general use, but the code for this project, including the Alexa Skills Kit configuration and the AWS Lambda code (written using their Node environment) is [available on GitHub](https://github.com/willwebberley/cenode-alexa).

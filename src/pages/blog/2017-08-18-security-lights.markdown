@@ -10,4 +10,4 @@ I put together a simple program that periodically checks the status of known Hue
 
 Currently the project is quite basic, but it could be further extended - perhaps to implement ignore lists or to automatically turn off specific sets of bulbs if they are found to be powered on.
 
-For those interested, the project source and setup info is [available on GitHub](https://github.com/flyingsparx/lights-checker).
+For those interested, the project source and setup info is [available on GitHub](https://github.com/willwebberley/lights-checker).

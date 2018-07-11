@@ -13,7 +13,7 @@ JavaScript to handle the appearance and ordering of slides. An example (to show 
 </p>
 <p>I bundled the JS into a single script, <span class="code">js/scriptslide.js</span>, which can be configured
 using the <span class="code">js/config.js</span> script. </p>
-<p>There is a <a href="https://github.com/flyingSparx/ScriptSlide" target="_blank">Github repo</a> for the code, along with example usage and instructions.</p>
+<p>There is a <a href="https://github.com/willwebberley/ScriptSlide" target="_blank">Github repo</a> for the code, along with example usage and instructions.</p>
 <p>
 Most configuration can be done by using the <span class="code">js/config.js</span> script, which supports many features including:</p>
 <ul>

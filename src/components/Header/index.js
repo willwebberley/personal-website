@@ -9,7 +9,7 @@ const Header = () => (
           🖖 Will Webberley
         </Link>
       </h1>
-      <p><Link to='/blog'>Blog</Link> - <a href="https://twitter.com/flyingsparx" target="_blank">Twitter</a> - <a href="https://github.com/flyingsparx" target="_blank">GitHub</a></p>
+      <p><Link to='/blog'>Blog</Link> - <a href="https://twitter.com/willwebberley" target="_blank">Twitter</a> - <a href="https://github.com/willwebberley" target="_blank">GitHub</a></p>
     </div>
   </div>
 )

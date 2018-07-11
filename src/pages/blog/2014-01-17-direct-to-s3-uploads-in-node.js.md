@@ -10,6 +10,6 @@ layout: post
 
 <p>I've recently had to implement something similar, but this time as part of an <a href="http://nodejs.org" target="_blank">Node.js</a> application. Since the only difference between the two approaches is literally just the endpoint used to return a signed request URL, I thought I'd post an update on how the endpoint could be constructed in Node.</p>
 
-<p>The front-end code in the companion repository demonstrates an example of how the endpoint can be queried to retrieve the signed URL, and is available <a href="https://github.com/flyingsparx/FlaskDirectUploader/blob/master/templates/account.html" target="_blank">here</a>. Take a look at that repository's README for information on the front-end dependencies.</p>
+<p>The front-end code in the companion repository demonstrates an example of how the endpoint can be queried to retrieve the signed URL, and is available <a href="https://github.com/willwebberley/FlaskDirectUploader/blob/master/templates/account.html" target="_blank">here</a>. Take a look at that repository's README for information on the front-end dependencies.</p>
 
-<p>The full example referenced by the Python article is in a <a href="https://github.com/flyingsparx/FlaskDirectUploader" target="_blank">repository</a> hosted by GitHub and may be useful in providing more context.</p>
+<p>The full example referenced by the Python article is in a <a href="https://github.com/willwebberley/FlaskDirectUploader" target="_blank">repository</a> hosted by GitHub and may be useful in providing more context.</p>
