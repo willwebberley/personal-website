@@ -2,15 +2,17 @@ import React from "react";
 import moment from 'moment';
 import Link from "gatsby-link";
 
+import Layout from '../../components/Layout/Layout.js';
+
 export default class Blog extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Blog</h2>
+      <Layout>
+        <h2>Notes</h2>
 
         {this.props.data.allMarkdownRemark.edges.map(({ node }) => {
-          if (node.fields.slug.includes('/blog/')) {
+          if (node.fields.slug.includes('/notes/')) {
             return (
               <div>
                 <h3><Link to={node.fields.slug}>{node.frontmatter.title}</Link> <small>{moment(node.fields.date).format('D MMMM YYYY')}</small></h3>
@@ -20,7 +22,7 @@ export default class Blog extends React.Component {
           }
         })}
 
-      </div>
+      </Layout>
     );
   }
 }

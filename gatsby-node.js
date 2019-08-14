@@ -5,7 +5,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   if (node.internal.type === `MarkdownRemark`) {
     let slug = createFilePath({ node, getNode, basePath: `pages` });
-    if (slug.indexOf('/blog/') > -1) {
+    if (slug.indexOf('/notes/') > -1) {
       const dateSection = slug.match(/[0-9]{4}-[0-9]{2}-[0-9]{2}-/g)[0];
       const newDateSection = dateSection.replace(/-/g, '/');
       slug = slug.replace(dateSection, newDateSection);
@@ -41,7 +41,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 			result.data.allMarkdownRemark.edges.map(({ node }) => {
         const { slug } = node.fields;
 
-        if (slug.indexOf('/blog/') > -1) {
+        if (slug.indexOf('/notes/') > -1) {
           boundActionCreators.createPage({
             path: slug,
             component: path.resolve(`./src/templates/blog-post.js`),
