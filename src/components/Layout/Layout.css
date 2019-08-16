@@ -17,6 +17,9 @@ a:active,
 a:hover {
   outline-width: 0;
 }
+a.active-link{
+  color:rgb(50,50,50);
+}
 
 body {
   color: hsla(0, 0%, 0%, 0.8);

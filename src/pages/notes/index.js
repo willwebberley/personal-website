@@ -9,7 +9,7 @@ export default class Blog extends React.Component {
   render() {
     return (
       <Layout>
-        <h2>Notes</h2>
+        <h2 style={{fontFamily:'Courier, Monospace'}}><Link to='/'>~/</Link>notes</h2>
 
         {this.props.data.allMarkdownRemark.edges.map(({ node }) => {
           if (node.fields.slug.includes('/notes/')) {
@@ -19,7 +19,7 @@ export default class Blog extends React.Component {
                 <p>{node.excerpt}</p>
               </div>
             );
-          }
+          } else return null;
         })}
 
       </Layout>
