@@ -67,5 +67,24 @@ article{
 
 article img{
   max-width:100%;
-  margin:40px 0px;
+  margin:50px auto;
+  display:block;
+}
+article .caption{
+  text-align:center;
+  margin-top:-45px;
+  font-style:italic;
+}
+
+code{
+  background:rgb(240,240,240);
+  color:#8C3667;
+  padding:2px 3px;
+  font-size:14px;
+  border-radius:2px;
+}
+pre code{
+  display:block;
+  white-space: pre-wrap !important;
+  padding: 10px;
 }

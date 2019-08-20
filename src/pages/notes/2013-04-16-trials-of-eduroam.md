@@ -7,7 +7,7 @@ layout: post
 ---
 
 <p>
-I've been having trouble connecting to Eduroam, at least reliably and persistently, in some barebones BNU/Linux installs and basic window managers. Eduroam is the wireless networking service used by many Universities in Europe, and whilst it would probably work fine using the tools provided by heavier DEs, I wanted something that could just run quickly and independently.
+I've been having trouble connecting to Eduroam, at least reliably and persistently, without heavy desktop environments or complicated network managers. Eduroam is the wireless networking service used by many Universities in Europe, and whilst it would probably work fine using the tools provided by heavier DEs, I wanted something that could just run quickly and independently.
 </p>
 <p>Many approaches require the editing of loads of config files (especially true for <span class="code">netcfg</span>), which would need altering again after things like password changes. The approach I used (for Arch Linux) is actually really simple and involves the use of the user-contributed <span class="code">wicd-eduroam</span> package available in the <a href="https://aur.archlinux.org/packages/wicd-eduroam/" target="_blank">Arch User Repository</a>.</p>
 <p>Obviously, <span class="code">wicd-eduroam</span> is related to, and depends on, <span class="code">wicd</span>, a handy network connection manager, so install that first:</p>

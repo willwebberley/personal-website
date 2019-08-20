@@ -3,11 +3,11 @@ title: CENode in IoT
 layout: post
 ---
 
-In my [previous post](/2017/06/22/cenode/) I discussed CENode and briefly mentioned its potential for use in interacting with the Internet of Things. I thought I'd add a practical example of how it might be used for this and for 'tasking' other systems.
+In a [previous note](/notes/2017/06/22/cenode/) I discussed CENode and briefly mentioned its potential for use in interacting with the Internet of Things. I thought I'd add a practical example of how it might be used for this and for 'tasking' other systems.
 
 I have a few [Philips Hue](http://www2.meethue.com/en-US) bulbs at home, and the Hue Bridge that enables interaction with the bulbs exposes a nice RESTful API. My aim was to get CENode to use this API to control my lights.
 
-A working example of the concepts in this post is available [on GitHub](https://github.com/willwebberley/CENode-IoT) (as a small webapp) and here's a short demo video (which includes a speech-recognition component):
+A working example of the concepts in this note is available [on GitHub](https://github.com/willwebberley/CENode-IoT) (as a small webapp) and here's a short demo video (which includes a speech-recognition component):
 
 <iframe src="https://player.vimeo.com/video/223169323" width="640" height="480" style="margin:20px auto;display:block; max-width: 100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
@@ -65,4 +65,4 @@ The function makes an appropriate request to the Hue Bridge based on the propert
 there is an iot card named card1 that is to the agent House and has 'instruction' as content and targets the hue bulb 'Lounge' and has 'on' as power
 ```
 
-And that's it, really. This post contains only the more interesting components of the experiment, but hopefully provides an indication of how the library may be used for simple inter-device communication. The [full demo](https://github.com/willwebberley/CENode-IoT/blob/master/app.js) includes extra code to handle the UI for a webapp and extra utility functions.
+And that's it, really. This note contains only the more interesting components of the experiment, but hopefully provides an indication of how the library may be used for simple inter-device communication. The [full demo](https://github.com/willwebberley/CENode-IoT/blob/master/app.js) includes extra code to handle the UI for a webapp and extra utility functions.

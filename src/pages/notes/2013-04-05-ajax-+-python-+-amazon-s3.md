@@ -2,7 +2,7 @@
 year: 2013
 month: 4
 day: 5
-title: "Normal service resumed: AJAX + Python + Amazon S3"
+title: "AJAX + Python + Amazon S3"
 layout: post
 ---
 

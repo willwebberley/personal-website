@@ -1,0 +1,12 @@
+---
+title: "Go backends on Now"
+---
+
+ZEIT's [Now](https://zeit.co/now) service is great for deploying apps and APIs that are able to make use of serverless execution models, and I use it for many of my projects (including this website, at the time of writing).
+
+I recently needed to deploy a backend written in Go and kept running into problems when trying to read data from the HTTP request body. The client-side app I was developing to communicate with the backend is also written in Go and everything seemed to work fine when running the backend locally (using `now dev`), but the exact same requests failed when running it in production. The client's request body was available when in development, but returned empty strings when running in production.
+
+It eventually boiled down to two things:
+
+* Now's dev environment does not seem to care about discrepancies between the `Content-Length` header and the actual request body. In production, however, if the `Content-Length` does not exist (or is `0`) then the request body will not be read even if it exists (and I admit that this should probably be the expected behaviour and is probably a symptom of the underlying cloud architecture rather than Now itself).
+* When creating new client requests, Go's [`http` package](https://golang.org/pkg/net/http/#Request) automatically sets the `Content-Length` header based on the length of the request body (and will overwrite/remove the header even if it is set manually), but it will only do this under [certain circumstances](https://golang.org/pkg/net/http/#NewRequest). In my scenario, a request was being generated with a valid body but without the `Content-Length` header. To fix the issue, rather than passing in an instance of `os.File` directly (which I was using to form my request), I needed to read the contents into a buffer before passing it into the request.
