@@ -1,10 +1,12 @@
 import React from 'react'
 
-const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
+import Layout from '../components/Layout/Layout.js';
+
+const ErrorPage = () => (
+  <Layout>
+    <h2 style={{fontFamily:'Courier, Monospace'}}>~/errors/404</h2>
+    <p>The requested file was not found.</p>
+  </Layout>
 )
 
-export default NotFoundPage
+export default ErrorPage
