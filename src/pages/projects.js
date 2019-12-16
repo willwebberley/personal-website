@@ -7,16 +7,16 @@ import { faLinux, faApple, faAndroid } from '@fortawesome/free-brands-svg-icons'
 import Layout from '../components/Layout/Layout.js';
 
 import treadlIcon from '../images/treadl.png';
-import triloIcon from '../images/trilo.png';
+import trialflareIcon from '../images/trialflare.png';
 import dottyIcon from '../images/dotty.png';
 import ssotoolsIcon from '../images/ssotools.png';
 
 const ProjectsPage = () => {
   const projects = [
     {
-      name: 'Trilo',
-      logo: triloIcon,
-      url: 'https://trilo.app',
+      name: 'Trialflare',
+      logo: trialflareIcon,
+      url: 'https://trialflare.com',
       description: 'A platform for running clinical and non-clinical trials for research and product development.',
       availableFor: [
         { name: 'Web', icon: faLaptop }, { name: 'Android', icon: faAndroid, url: 'https://play.google.com/store/apps/details?id=app.trilo' }, { name: 'iOS', icon: faApple, url: 'https://itunes.apple.com/gb/app/trilo/id1460738681' }
@@ -34,7 +34,7 @@ const ProjectsPage = () => {
       logo: dottyIcon,
       url: 'https://dotty.cloud',
       description: 'A command-line tool and RESTful API for backing-up and storing dotfiles and configuration files.',
-      availableFor: [ { name: 'Web', icon: faLaptop }, { name: 'macOS', icon: faApple, url: 'https://dotty.cloud/#/documentation/quick-start' }, { name: 'Linux', icon: faLinux, url: 'https://dotty.cloud/#/documentation/quick-start' } ]
+      availableFor: [ { name: 'Web', icon: faLaptop }, { name: 'macOS', icon: faApple, url: 'https://dotty.cloud/documentation/quick-start' }, { name: 'Linux', icon: faLinux, url: 'https://dotty.cloud/documentation/quick-start' } ]
     },
     {
       name: 'SSO Tools',
@@ -49,7 +49,7 @@ const ProjectsPage = () => {
   return (
   <Layout>
     <h2 style={{fontFamily:'Courier, Monospace'}}><Link to='/'>~/</Link>projects</h2>
-    <p>Some of the things I am currently working on.</p>
+    <p>Some of the things I am currently working on. Please <a href='https://twitter.com/willwebberley' target='_blank' rel='noopener noreferrer'>get in touch</a> if you are interested in finding out more about these (or if you'd like to help out or get involved!).</p>
     {projects.map((p, i) =>
       <div key={i} style={{display: 'flex', flexDirection: 'row', marginBottom: 30, borderBottom: '1px solid rgb(250,250,250)'}}>
         <div style={{paddingRight: 30, paddingTop: 30}}>

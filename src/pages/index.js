@@ -2,19 +2,20 @@ import React from 'react'
 import Link from "gatsby-link";
 
 import Layout from '../components/Layout/Layout.js';
+import Emoji from '../components/Emoji';
 
 const IndexPage = () => (
   <Layout>
     <h2 style={{fontFamily:'Courier, Monospace'}}>~/</h2>
-    <p><span role="img" aria-label="Coding">👨‍💻</span> I'm a software engineer interested in a wide range of technological areas - particularly web, cloud, and IoT.</p>
+    <p><Emoji n="Live long" e='🖖' /> Hello and welcome. I'm a tech lead/enthusiast and software engineer based in Wales, UK. I'm mainly interested in web and mobile technologies, containerisation and serverless, and IoT and automation.</p>
 
-    <p>In my day job I am Chief Technology Officer at <a href="https://simplydo.co.uk" target="_blank" rel='noopener noreferrer'>Simply Do Ideas</a>, which provides a platform to help people to build and realise their innovations and entrepreneurial ideas.</p>
+    <p><Emoji e='💡' /> Since 2016 I have been Chief Technology Officer at <a href="https://simplydo.co.uk" target="_blank" rel='noopener noreferrer'>Simply Do Ideas</a>, which provides a platform to help people to build and realise their innovations and entrepreneurial ideas. Before this I was a software engineer at <a href="https://www.chaserhq.com" target="_blank" rel='noopener noreferrer'>Chaser</a>.</p>
 
-    <p>I also work on and maintain a number of other <Link to='/projects'>projects</Link>.</p>
+    <p><Emoji e='📦' /> I also work on and maintain a number of other <Link to='/projects'>projects</Link>.</p>
 
-    <p>Before joining Simply Do I was a software engineer at <a href="https://www.chaserhq.com" target="_blank" rel='noopener noreferrer'>Chaser</a> and before that I was a researcher at <a href="http://cardiff.ac.uk" target="_blank" rel='noopener noreferrer'>Cardiff University</a>'s School of <a href="http://www.cardiff.ac.uk/computer-science" target="_blank" rel='noopener noreferrer'>Computer Science &amp; Informatics</a>, where I completed <a href="https://github.com/willwebberley/thesis" target="_blank" rel='noopener noreferrer'>my PhD</a> (looking into the 'unfiltered feed' problem in online social networks) and then moved on to join the UK MoD and US Army Research Labs coalition-led <a href="https://en.wikipedia.org/wiki/DAIS-ITA" target="_blank" rel='noopener noreferrer'>ITA project</a>.</p>
-
-    <p>Whilst at Cardiff University, I also lectured the Advanced Computer Science MSc module <i><a href="https://github.com/willwebberley/CMT111" target="_blank" rel='noopener noreferrer'>Web &amp; Social Computing</a></i> and the Computer Science BSc module <i><a href="https://github.com/willwebberley/CM2101" target="_blank" rel='noopener noreferrer'>Human-Computer Interaction</a></i>.</p>
+    <p><Emoji e='🤓' /> I completed <a href="https://github.com/willwebberley/thesis" target='noopener noreferrer'>my PhD</a> at <a href="http://cardiff.ac.uk" target="_blank" rel='noopener noreferrer'>Cardiff University</a>'s School of <a href="http://www.cardiff.ac.uk/computer-science" target="_blank" rel='noopener noreferrer'>Computer Science &amp; Informatics</a> (looking into the 'unfiltered feed' problem in online social networks), before going on to join the IBM-led UK MoD and US Army Research Labs coalition <a href="https://en.wikipedia.org/wiki/NIS-ITA" target="_blank" rel='noopener noreferrer'>ITA project</a> as a postdoctoral research associate. Whilst there, I also lectured the Advanced Computer Science MSc module <i><a href="https://github.com/willwebberley/CMT111" target="_blank" rel='noopener noreferrer'>Web &amp; Social Computing</a></i> and the Computer Science BSc module <i><a href="https://github.com/willwebberley/CM2101" target="_blank" rel='noopener noreferrer'>Human-Computer Interaction</a></i>.</p>
+  
+    <p><Emoji n="Coding" e='👨‍💻' /> Some of my research publications are <Link to='/research'>available here</Link>.</p>
   </Layout>
 )
 
