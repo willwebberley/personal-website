@@ -110,10 +110,10 @@ const ProjectsPage = () => {
     <div style={{display:'grid', gridColumnGap: 20, gridTemplateColumns: '1fr 1fr'}}>
       <div>
         <h3 style={{marginTop: 0}}>Projects</h3>
-        <p>Whilst completing my PhD and as a postdoctoral research associate at Cardiff University I worked on a number of projects.</p>
+        <p>I have been involved in a number of research projects.</p>
 
         <h4>NIS/DAIS-ITA project</h4>
-        <p>2014-2017. The <a href='https://en.wikipedia.org/wiki/DAIS-ITA' target='_blank' rel='noopener noreferrer'>ITA program</a> is a research project undertaken by a coalition between the UK MoD and US Army Research Labs, led by IBM. Whilst on this project I worked closely wth <a href='https://www.ibm.com/blogs/emerging-technology/' target='_blank' rel='noopener noreferrer'>IBM Emerging Technology</a> on Controlled English and machine task assignment - particularly the <a href='http://www.cenode.io/' target='_blank' rel='noopener noreferrer'>CENode library and tool</a>.</p>
+        <p>2014-2017. The <a href='https://en.wikipedia.org/wiki/DAIS-ITA' target='_blank' rel='noopener noreferrer'>ITA program</a> is a research project undertaken by a coalition between the UK MoD and US Army Research Labs, led by IBM. Whilst on this project I worked closely wth <a href='https://www.ibm.com/blogs/emerging-technology/' target='_blank' rel='noopener noreferrer'>IBM Emerging Technology</a> on Controlled English and machine task assignment - particularly the <a href='http://www.cenode.io/' target='_blank' rel='noopener noreferrer'>CENode library and engine</a>.</p>
 
         <h4>Inferring interestingness in online social networks</h4>
         <p>2010-2014. My PhD research resulted in a number of key academic outputs and <a href='http://orca.cf.ac.uk/68758/1/2014webberleywmphd.pdf' target='_blank' rel='noopener noreferrer'>my thesis</a>.</p>
