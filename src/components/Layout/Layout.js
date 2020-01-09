@@ -12,7 +12,7 @@ const TemplateWrapper = ({ children }) => (
       {children}
 
       <div style={{borderTop: '2px solid rgb(240,240,240)', paddingTop: 15, marginTop: 50}}>
-        <span style={{fontSize: 11, fontFamily:'Courier, Monospace'}}>&copy; Will Webberley 2019</span>
+        <span style={{fontSize: 11, fontFamily:'Courier, Monospace'}}>&copy; Will Webberley {(new Date()).getFullYear()}</span>
       </div>
     </div>
   </div>
