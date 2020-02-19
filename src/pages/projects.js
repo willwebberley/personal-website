@@ -84,7 +84,7 @@ const ProjectsPage = () => {
   return (
   <Layout>
     <h2 style={{fontFamily:'Courier, Monospace'}}><Link to='/'>~/</Link>projects</h2>
-    <div style={{display:'grid', gridColumnGap: 20, gridTemplateColumns: '1fr 1fr'}}>
+    <div style={{display:'grid', gridColumnGap: 20, gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
       <div>
         <p>Some of the things I am currently working on. Please <a href='https://twitter.com/willwebberley' target='_blank' rel='noopener noreferrer'>get in touch</a> if you are interested in finding out more about these (or if you'd like to help out or get involved!).</p>
         {projects.map((p, i) =>

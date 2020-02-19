@@ -107,7 +107,7 @@ const ProjectsPage = () => {
   return (
   <Layout>
     <h2 style={{fontFamily:'Courier, Monospace'}}><Link to='/'>~/</Link>research</h2>
-    <div style={{display:'grid', gridColumnGap: 20, gridTemplateColumns: '1fr 1fr'}}>
+    <div style={{display:'grid', gridColumnGap: 20, gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))'}}>
       <div>
         <h3 style={{marginTop: 0}}>Projects</h3>
         <p>I have been involved in a number of research projects.</p>
