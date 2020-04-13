@@ -14,19 +14,10 @@ import ssotoolsIcon from '../images/ssotools.png';
 const ProjectsPage = () => {
   const projects = [
     {
-      name: 'Trialflare',
-      logo: trialflareIcon,
-      url: 'https://trialflare.com',
-      description: 'A platform for running clinical and non-clinical trials for research and product development.',
-      availableFor: [
-        { name: 'Web', icon: faLaptop }, { name: 'Android', icon: faAndroid, url: 'https://play.google.com/store/apps/details?id=app.trilo' }, { name: 'iOS', icon: faApple, url: 'https://itunes.apple.com/gb/app/trilo/id1460738681' }
-      ]
-    },
-    {
       name: 'Treadl',
       logo: treadlIcon,
       url: 'https://treadl.com',
-      description: 'A webapp for managing, displaying, and backing-up weaving projects.',
+      description: 'A webapp for managing, displaying, and sharing weaving projects.',
       availableFor: [ { name: 'Web', icon: faLaptop } ]
     },
     {
@@ -42,7 +33,16 @@ const ProjectsPage = () => {
       url: 'https://sso.tools',
       description: 'A webapp for managing custom IdPs for testing and building out single sign-on and enterprise applications.',
       availableFor: [ { name: 'Web', icon: faLaptop } ]
-    }
+    },
+    {
+      name: 'Trialflare',
+      logo: trialflareIcon,
+      url: 'https://trialflare.com',
+      description: 'A platform for running clinical and non-clinical trials for research and product development.',
+      availableFor: [
+        { name: 'Web', icon: faLaptop }, { name: 'Android', icon: faAndroid, url: 'https://play.google.com/store/apps/details?id=app.trilo' }, { name: 'iOS', icon: faApple, url: 'https://itunes.apple.com/gb/app/trilo/id1460738681' }
+      ]
+    },
   ];
 
   const otherProjects = [
