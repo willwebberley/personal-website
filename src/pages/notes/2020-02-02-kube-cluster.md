@@ -1,10 +1,10 @@
 ---
-title: "Creating a Kubernetes Cluster"
+title: "Kubernetes Cluster: Essentials"
 ---
 
-This note documents the set-up of a k8s cluster from scratch, including ingress and load-balanced TLS support for web applications. It is mainly for myself to revisit and reference later on. The result of this note is not (quite) production-grade, and additional features (e.g. firewalls/logging/backups) should be enabled to improve its robustness.
+This note documents the set-up of a k8s cluster from scratch, including ingress and load-balanced TLS support for web applications. It's mainly for myself to revisit and reference later on. The result of this note is not (quite) production-grade, and additional features (e.g. firewalls/logging/backups) should be enabled to improve its robustness.
 
-Several cloud providers offer great managed k8s services (including [Amazon EKS](https://aws.amazon.com/eks/), [GKE](https://cloud.google.com/kubernetes-engine/), [Digital Ocean](https://www.digitalocean.com/products/kubernetes/), etc.). Whilst these would be recommended for sensitive or production workloads, I wanted to create my own provider-independent cluster in order to understand the ins and outs.
+Several cloud providers offer managed k8s services (including [Amazon EKS](https://aws.amazon.com/eks/), [GKE](https://cloud.google.com/kubernetes-engine/), [Digital Ocean](https://www.digitalocean.com/products/kubernetes/), etc.). Whilst these would be recommended for sensitive or production workloads, I wanted to create my own provider-independent cluster in order to understand the ins and outs.
 
 ## Infrastructure
 
@@ -35,7 +35,7 @@ On the control node (`kube1`) prepare the cluster:
 
 * As root, initialise the cluster: `kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.131.106.38`
   * Replace apiserver-advertise-address with the private IP for the master node
-  * Setting `--pod-network-cidr` allows the network fabric to later allocate IP addresses to pods in your cluster from this range
+  * Setting `--pod-network-cidr` allows Flannel (the CNI plugin we're using here) to later allocate IP addresses to pods in your cluster from this range
 * Create a new user to manage kubernetes: `useradd kubeuser`
 * Create a new `.kube` directory: `mkdir /home/kubeuser/.kube && chown kubeuser:kubeuser /home/kubeuser/.kube`
 * Copy in the default config file: `cp /etc/kubernetes/admin.conf /home/kubeuser/.kube/config && chown kubeuser:kubeuser /home/kubeuser/.kube/config`
