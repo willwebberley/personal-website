@@ -2,15 +2,13 @@
 title: "Command-line bookkeeping in Animal Crossing"
 ---
 
-## Background
-
 I recently stumbled across [an article](https://www.csun.io/2020/05/17/gnucash-finance.html) on Hacker News discussing the pros of basic personal accounting using [GnuCash](https://www.gnucash.org/) - a free and open-source desktop accounting program. The article was interesting as the data geek in me resonated with the notion of being able to query the information in useful ways, particularly after having used the system for enough time to accumulate enough financial data.
 
 The [comments on the article's post](https://news.ycombinator.com/item?id=23237445) also mentioned another tool, [Ledger](https://www.ledger-cli.org/). Whilst GnuCash allows users to input transactional and account information as well as reports, Ledger's focus is only on the reports - a key feature of this CLI tool is that the actual bookkeeping is made directly (or through other tools) into a text file, which Ledger only reads from and never otherwise touches. Both programs work on the principle of [double-entry bookkeeping](https://en.wikipedia.org/wiki/Double-entry_bookkeeping), but some of the key positives of Ledger are its speed ([even when working with several decades' worth of financial data](https://www.ledger-cli.org/3.0/doc/ledger3.html#Archiving-Previous-Years)) and its innate ability to be combined with other useful UNIX tools - both for data input and, if necessary (Ledger's own reporting outputs are very powerful), output.
 
 The fact that it relies on only a single human-manageable text file, which can contain the data for any number of accounts, and which can easily be version-controlled, is also a bonus in my eyes. The author of [Beancount](http://furius.ca/beancount/) - a similar program worth a look at - also wrote a good article about the benefits of [command-line accounting](https://docs.google.com/document/d/1e4Vz3wZB_8-ZcAwIFde8X5CjzKshE4-OXtVVHm4RQ8s).
 
-I do not come from an accounting or bookkeeping background, but I was keen to get the grips of the basics before diving in too far and making too many mistakes that I'd have to go back and change later. I currently use [Xero](https://www.xero.com/uk/) for some business work, which happily handles (nearly) everything for me - invoicing, payments, automatic bank feeds and reconciliations, and more. It sometimes feels a bit slow and clunky, though, and its general ease of use does teach much about what actually goes on behind the scenes. Ledger seemed like a great alternative to use for personal finance - a powerful tool for viewing key information at a glance, combined with a familiar and standard method to "input" data. It also gives me the feel that I am more intimate with my accounts and also a richer understanding of my financial model.
+I do not come from an accounting or bookkeeping background, but I was keen to start trying it out for myself, and wanted to make sure that I could get the grips of the basics before diving in too far and making too many mistakes that I'd have to go back and change later. I currently use [Xero](https://www.xero.com/uk/) for some business work, which happily handles (nearly) everything for me - invoicing, payments, automatic bank feeds and reconciliations, and more. It sometimes feels a bit slow and clunky, though, and its general ease of use does teach much about what actually goes on behind the scenes. Ledger seemed like a great alternative to use for personal finance - a powerful tool for viewing key information at a glance, combined with a familiar and standard method to "input" data. It also gives me the feel that I am more intimate with my accounts and also a richer understanding of my financial model.
 
 Moving forwards from my initial experiments, I had three main aims:
 
@@ -84,6 +82,8 @@ When you first arrive at your new island, [Tom Nook](https://animalcrossing.fand
 Throughout the game the player is involved in a number of different types of financial transaction and must take out loans, make sales and purchases in order to progress. As I played, it occurred that this would be a great way to learn and explain basic bookkeeping with Ledger.
 
 In the game the player works with a number of different asset types. The main currency (money) is `Bells` but there is also a loyalty program called `Nook Miles` which allows the player to gain points (like air miles or a points card for a store). Luckily Ledger can handle different currencies and commodities with no problem - and will even make conversions where it can too - so we can deal with all of our Animal Crossing assets in a single ledger.
+
+The rest of this post walks through some of the early stages of the game, using it to illustrate basic bookkeeping with Ledger.
 
 ## Starting off the ledger
 
@@ -416,7 +416,7 @@ Later, Lloid would use his contributed assets to pay for the materials and labou
   Assets:Cash
 ```
 
-Tagging transactions in these ways allows for powerful queries when reporting later on. Lloid can now easily build comprehensive reports for all transactions for a particular build, or across multiple builds. In the real world this type of tagging coule be useful if you let out property. For example, you could tag all transactions involving the property (e.g. rent, expenses, mortgage payments, etc.) to make tax returns much less painful.
+Tagging transactions in these ways allows for powerful queries when reporting later on. Lloid can now easily build comprehensive reports for all transactions for a particular build, or across multiple builds. In the real world this type of tagging could be useful if you let out property. For example, you could tag all transactions involving the property (e.g. rent, expenses, mortgage payments, etc.) to make tax returns much less painful.
 
 ## Investments and capital gains (& losses)
 
@@ -564,7 +564,7 @@ Again, I'll mention the [Ledger documentation](https://www.ledger-cli.org/3.0/do
 
 ## Conclusion
 
-I hope this has been a useful insight into how command-line accounting can work and how it might be beneficial when using it for managing your own real-world (or Animal Crossing!) finances.
+I hope this has been a useful insight into how command-line accounting can work and how it might be beneficial when using it for managing your own real-world (or non-real!) finances.
 
 Although there are definitely "wrong" ways to do bookkeeping, as long as you follow the basic principles then the way you keep your books is down to what works for you. If this is something you want to try yourself then, like a diet, it's important to find an approach that means you can stick to it - by choosing a set of accounts that gives enough detail without being too specific to manage, and by finding the right time balance spent in logging your transactions and reconciling against your real world accounts.
 
