@@ -34,7 +34,7 @@ const ProjectsPage = () => {
       description: 'A webapp for managing custom IdPs for testing and building out single sign-on and enterprise applications.',
       availableFor: [ { name: 'Web', icon: faLaptop } ]
     },
-    {
+    /*{
       name: 'Trialflare',
       logo: trialflareIcon,
       url: 'https://trialflare.com',
@@ -42,7 +42,7 @@ const ProjectsPage = () => {
       availableFor: [
         { name: 'Web', icon: faLaptop }, { name: 'Android', icon: faAndroid, url: 'https://play.google.com/store/apps/details?id=app.trilo' }, { name: 'iOS', icon: faApple, url: 'https://itunes.apple.com/gb/app/trilo/id1460738681' }
       ]
-    },
+    },*/
   ];
 
   const otherProjects = [
