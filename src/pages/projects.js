@@ -7,7 +7,6 @@ import { faLinux, faApple, faAndroid, faGithub } from '@fortawesome/free-brands-
 import Layout from '../components/Layout/Layout.js';
 
 import treadlIcon from '../images/treadl.png';
-import trialflareIcon from '../images/trialflare.png';
 import dottyIcon from '../images/dotty.png';
 import ssotoolsIcon from '../images/ssotools.png';
 
@@ -18,7 +17,7 @@ const ProjectsPage = () => {
       logo: treadlIcon,
       url: 'https://treadl.com',
       description: 'A webapp for managing, displaying, and sharing weaving projects.',
-      availableFor: [ { name: 'Web', icon: faLaptop } ]
+      availableFor: [ { name: 'Web', icon: faLaptop }, { name: 'iOS', icon: faApple }, { name: 'Android', icon: faAndroid } ]
     },
     {
       name: 'Dotty',

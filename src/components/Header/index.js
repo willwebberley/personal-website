@@ -22,8 +22,9 @@ const Header = () => (
         <Link to='/projects' activeClassName='active-link'>projects</Link><Spacer />
         <Link to='/research' activeClassName='active-link'>research</Link><Spacer />
         <Link to='/notes' activeClassName='active-link'>notes</Link><Spacer />
-        <a href="https://twitter.com/willwebberley" target="_blank" rel="noopener noreferrer">twitter</a><Spacer />
-        <a href="https://github.com/willwebberley" target="_blank" rel="noopener noreferrer">github</a>
+        <a rel="me" href="https://mastodon.social/@will88"><Emoji e='📣' /> toots</a><Spacer />
+        <a href="https://pixelfed.social/@wilw" target="_blank" rel="noopener noreferrer"><Emoji e='🖼️' /> pixels</a><Spacer />
+        <a href="https://github.com/willwebberley" target="_blank" rel="noopener noreferrer"><Emoji e='🐙' /> code</a>
       </p>
     </div>
   </div>
