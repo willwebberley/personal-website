@@ -3,7 +3,7 @@ import Link from "gatsby-link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLaptop } from '@fortawesome/free-solid-svg-icons'
 import { faLinux, faApple, faAndroid, faGithub } from '@fortawesome/free-brands-svg-icons';
-
+import Helmet from 'react-helmet'
 import Layout from '../components/Layout/Layout.js';
 
 import treadlIcon from '../images/treadl.png';
@@ -82,6 +82,7 @@ const ProjectsPage = () => {
   
   return (
   <Layout>
+    <Helmet title='Projects' />
     <h2 style={{fontFamily:'Courier, Monospace'}}><Link to='/'>~/</Link>projects</h2>
     <div style={{display:'grid', gridColumnGap: 20, gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
       <div>

@@ -1,6 +1,7 @@
 import React from "react";
 import moment from 'moment';
 import Link from "gatsby-link";
+import Helmet from 'react-helmet'
 
 import Layout from '../../components/Layout/Layout.js';
 
@@ -9,6 +10,7 @@ export default class Blog extends React.Component {
   render() {
     return (
       <Layout>
+        <Helmet title='Notes' />
         <h2 style={{fontFamily:'Courier, Monospace'}}><Link to='/'>~/</Link>notes</h2>
 
         {this.props.data.allMarkdownRemark.edges.map(({ node }) => {

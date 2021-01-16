@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from "gatsby-link";
+import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout/Layout.js';
 
@@ -106,6 +107,7 @@ const ProjectsPage = () => {
     
   return (
   <Layout>
+    <Helmet title='Research' />
     <h2 style={{fontFamily:'Courier, Monospace'}}><Link to='/'>~/</Link>research</h2>
     <div style={{display:'grid', gridColumnGap: 20, gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))'}}>
       <div>
