@@ -82,7 +82,9 @@ const ProjectsPage = () => {
   
   return (
   <Layout>
-    <Helmet title='Projects' />
+    <Helmet title='Projects'>
+      <meta name="description" content="Projects I'm working on now and in the past" />
+    </Helmet>
     <h2 style={{fontFamily:'Courier, Monospace'}}><Link to='/'>~/</Link>projects</h2>
     <div style={{display:'grid', gridColumnGap: 20, gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))'}}>
       <div>

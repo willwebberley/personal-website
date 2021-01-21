@@ -3,6 +3,7 @@ year: 2013
 month: 8
 day: 31
 title: A rather French week
+description: "Away in France for a week"
 layout: post
 ---
 

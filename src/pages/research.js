@@ -107,7 +107,9 @@ const ProjectsPage = () => {
     
   return (
   <Layout>
-    <Helmet title='Research' />
+    <Helmet title='Research'>
+      <meta name="description" content="Research work papers and outputs" />
+    </Helmet>
     <h2 style={{fontFamily:'Courier, Monospace'}}><Link to='/'>~/</Link>research</h2>
     <div style={{display:'grid', gridColumnGap: 20, gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))'}}>
       <div>

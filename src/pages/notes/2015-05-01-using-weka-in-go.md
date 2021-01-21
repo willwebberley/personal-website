@@ -3,6 +3,7 @@ year: 2015
 month: 5
 day: 1
 title: Using Weka in Go
+description: "Weka bindings for Go"
 layout: post
 ---
 

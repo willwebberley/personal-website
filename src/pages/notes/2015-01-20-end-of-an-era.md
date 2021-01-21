@@ -3,6 +3,7 @@ year: 2015
 month: 1
 day: 20
 title: End of an Era
+description: "Completing my PhD"
 layout: post
 ---
 

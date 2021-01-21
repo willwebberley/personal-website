@@ -1,5 +1,6 @@
 ---
 title: "Go backends on Now"
+description: "Some of the pitfalls using Go as a function language runtime on Now Vercel"
 ---
 
 ZEIT's [Now](https://zeit.co/now) service is great for deploying apps and APIs that are able to make use of serverless execution models, and I use it for many of my projects (including this website, at the time of writing).

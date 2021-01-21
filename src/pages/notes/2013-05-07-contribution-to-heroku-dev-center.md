@@ -3,6 +3,7 @@ year: 2013
 month: 5
 day: 7
 title: Contribution to Heroku Dev Center
+description: "Contributing a blog post on direct uploads to S3 to the Heroku Dev Center"
 layout: post
 ---
 

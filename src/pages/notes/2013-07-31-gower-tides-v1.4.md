@@ -3,6 +3,7 @@ year: 2013
 month: 7
 day: 31
 title: Gower Tides v1.4
+description: "Announcing the latest version of Gower Tides Android app"
 layout: post
 ---
 

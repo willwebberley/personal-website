@@ -3,6 +3,7 @@ year: 2012
 month: 11
 day: 13
 title: Delving into Android
+description: "Starting some Android development"
 layout: post
 ---
 

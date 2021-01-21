@@ -3,6 +3,7 @@ year: 2012
 month: 10
 day: 10
 title: "Seminar: Retweeting"
+description: "Giving an seminar on my research"
 layout: post
 ---
 

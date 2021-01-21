@@ -1,11 +1,15 @@
 import React from 'react'
 import Link from "gatsby-link";
+import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout/Layout.js';
 import Emoji from '../components/Emoji';
 
 const IndexPage = () => (
   <Layout>
+    <Helmet title='Home'>
+      <meta name="description" content="Welcome to my website" />
+    </Helmet>
     <h2 style={{fontFamily:'Courier, Monospace'}}>~/</h2>
     <p><Emoji n="Live long" e='🖖' /> Hello and welcome. I'm a tech lead/enthusiast and software engineer based in Wales, UK. I'm mainly interested in web and mobile technologies, containerisation and serverless, and IoT and automation.</p>
 

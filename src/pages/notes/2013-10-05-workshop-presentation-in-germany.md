@@ -3,6 +3,7 @@ year: 2013
 month: 10
 day: 5
 title: Workshop Presentation in Germany
+description: "Presenting research in Germany"
 layout: post
 ---
 

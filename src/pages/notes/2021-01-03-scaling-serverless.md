@@ -3,6 +3,7 @@ year: 2021
 month: 1
 day: 3
 title: "Scaling serverless apps: some lessons learned"
+description: "Potential pitfalls in writing serverless apps for AWS Lambda, Google Cloud Functions and Cloudflare Workers."
 ---
 
 Building apps on serverless architecture has been a game-changer for me and for developers everywhere, enabling small dev teams to cheaply build and scale services from MVP through to enterprise deployment.

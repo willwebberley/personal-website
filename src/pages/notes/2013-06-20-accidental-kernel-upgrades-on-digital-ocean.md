@@ -3,6 +3,7 @@ year: 2013
 month: 6
 day: 20
 title: Accidental Kernel Upgrades on Digital Ocean
+description: "Issues when accidentally upgrading the kernel in Arch Linux on Digital Ocean"
 layout: post
 ---
 

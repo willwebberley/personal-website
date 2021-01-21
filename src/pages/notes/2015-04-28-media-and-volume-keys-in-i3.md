@@ -3,6 +3,7 @@ year: 2015
 month: 4
 day: 28
 title: Media and volume keys in i3
+description: "Keybinds for media control and volume in i3 window manager"
 layout: post
 ---
 

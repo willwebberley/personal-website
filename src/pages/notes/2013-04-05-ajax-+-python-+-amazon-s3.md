@@ -3,6 +3,7 @@ year: 2013
 month: 4
 day: 5
 title: "AJAX + Python + Amazon S3"
+description: "Direct to S3 uploads using Python and AWS S3"
 layout: post
 ---
 

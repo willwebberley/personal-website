@@ -3,6 +3,7 @@ year: 2013
 month: 3
 day: 7
 title: Gower Tides App Released
+description: "Announcing the release of my Gower Tides Android app"
 layout: post
 ---
 

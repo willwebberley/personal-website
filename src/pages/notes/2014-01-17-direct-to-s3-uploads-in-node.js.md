@@ -3,6 +3,7 @@ year: 2014
 month: 1
 day: 17
 title: Direct-to-S3 Uploads in Node.js
+description: "Uploading assets directly to S3 using Node.js"
 layout: post
 ---
 

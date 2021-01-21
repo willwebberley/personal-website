@@ -1,5 +1,6 @@
 ---
 title: "Kubernetes Cluster: Essentials"
+description: "Setting up a Kubernetes cluster from scratch"
 ---
 
 This note documents the set-up of a k8s cluster from scratch, including ingress and load-balanced TLS support for web applications. It's mainly for myself to revisit and reference later on. The result of this note is not (quite) production-grade, and additional features (e.g. firewalls/logging/backups) should be enabled to improve its robustness.

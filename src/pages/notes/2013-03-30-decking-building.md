@@ -3,6 +3,7 @@ year: 2013
 month: 3
 day: 30
 title: Decking Building
+description: "Building a deck for the garden"
 layout: post
 ---
 

@@ -3,6 +3,7 @@ year: 2012
 month: 9
 day: 20
 title: DigiSocial Hackathon
+description: "My attendance at the DigiSocial Hackathon"
 layout: post
 ---
 

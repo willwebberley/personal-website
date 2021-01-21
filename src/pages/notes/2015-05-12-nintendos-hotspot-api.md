@@ -3,6 +3,7 @@ year: 2015
 month: 5
 day: 12
 title: Nintendo's Hotspot 'API'
+description: "Using Nintendo's 3DS Hotspot API for Streetpass and Spotpass"
 layout: post
 ---
 

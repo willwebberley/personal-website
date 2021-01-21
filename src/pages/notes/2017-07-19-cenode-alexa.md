@@ -1,5 +1,6 @@
 ---
 title: "Alexa, ask Sherlock..."
+description: "Explaining how CENode can be used to interact with additional IoT devices."
 layout: post
 ---
 

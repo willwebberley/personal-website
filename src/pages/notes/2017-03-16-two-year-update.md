@@ -1,5 +1,6 @@
 ---
 title: Two Year Update
+description: "Updating my blog after two years"
 layout: post
 ---
 

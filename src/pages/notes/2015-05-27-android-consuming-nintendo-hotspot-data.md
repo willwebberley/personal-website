@@ -1,5 +1,6 @@
 ---
 title: "Android: Consuming Nintendo Hotspot Data"
+description: "Using the Nintendo Streetpass API in an Android app"
 ---
 
 <p>I recently <a href="https://will.now.sh/blog/2015/5/12/nintendos-hotspot-api" target="_blank">blogged about</a> Nintendo Hotspot data and mentioned it could be more usefully consumable in a native mobile app.</p>

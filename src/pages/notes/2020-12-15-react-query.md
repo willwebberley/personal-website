@@ -3,6 +3,7 @@ year: 2020
 month: 12
 day: 15
 title: "React Query"
+description: "Making use of the React Query library for interacting with web APIs in React apps, and for caching responses"
 ---
 
 If you write React web apps that interface with a backend web API then definitely consider trying [React Query](https://react-query.tanstack.com).

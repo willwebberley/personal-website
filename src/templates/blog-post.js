@@ -11,7 +11,9 @@ export default class BlogPost extends React.Component {
     const post = this.props.data.markdownRemark;
     return (
       <Layout>
-        <Helmet title={post.frontmatter.title} />
+        <Helmet title={post.frontmatter.title}>
+          {post.frontmatter.description && <meta name="description" content={post.frontmatter.description} />}
+        </Helmet>
         <h4><Link to='/notes/'>More notes</Link></h4>
         <h2>{post.frontmatter.title}</h2>
         <h4>{moment(post.fields.date).format('D MMMM YYYY')} <i><small>({moment(post.fields.date).fromNow()})</small></i></h4>
@@ -30,6 +32,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
       }
       fields {
         date

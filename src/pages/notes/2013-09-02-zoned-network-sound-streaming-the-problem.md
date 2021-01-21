@@ -3,6 +3,7 @@ year: 2013
 month: 9
 day: 2
 title: "Zoned Network Sound-Streaming: The Problem"
+description: "Multi-room audio simultaneous playback"
 layout: post
 ---
 

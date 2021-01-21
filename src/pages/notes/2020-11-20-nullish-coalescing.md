@@ -3,6 +3,7 @@ year: 2020
 month: 11
 day: 20
 title: "JS Tidbit: Nullish Coalescing"
+description: "Using the JavaScript Nullish Coalescing operator to improve code conciseness"
 ---
 
 This short post introduces a useful JavaScript operator to help make your one-liners even more concise.

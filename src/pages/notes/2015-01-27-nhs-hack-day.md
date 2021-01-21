@@ -3,6 +3,7 @@ year: 2015
 month: 1
 day: 27
 title: NHS Hack Day
+description: "Taking part in the 2015 NHS Hack Day"
 layout: post
 ---
 

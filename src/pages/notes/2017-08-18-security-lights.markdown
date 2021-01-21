@@ -1,5 +1,6 @@
 ---
 title: "Hue: Security Lights"
+description: "Working with the Philips Hue bridge"
 ---
 
 A [previous note about Philips Hue bulbs](/notes/2017/06/26/cenode-iot) got me thinking that the API exposed by the bridge might be used to warn if the house lights are left on too late at night, or even if they get turned on at unexpected times - potentially for security.

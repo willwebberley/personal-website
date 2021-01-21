@@ -3,6 +3,7 @@ year: 2013
 month: 2
 day: 18
 title: ScriptSlide
+description: "Small JS library: scriptslide"
 layout: post
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Command-line bookkeeping in Animal Crossing"
+description: "Learning Ledger command-line bookkeeping and accountancy using Animal Crossing."
 ---
 
 I recently stumbled across [an article](https://www.csun.io/2020/05/17/gnucash-finance.html) on Hacker News discussing the pros of basic personal accounting using [GnuCash](https://www.gnucash.org/) - a free and open-source desktop accounting program. The article was interesting as the data geek in me resonated with the notion of being able to query the information in useful ways, particularly after having used the system for enough time to accumulate enough financial data.

@@ -3,6 +3,7 @@ year: 2015
 month: 2
 day: 18
 title: Web and Social Computing
+description: "Lecturing masters students on Web and Social Computing"
 layout: post
 ---
 

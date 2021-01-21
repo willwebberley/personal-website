@@ -3,6 +3,7 @@ year: 2014
 month: 3
 day: 26
 title: Talk on Open-Source Contribution
+description: "Internal seminar on contributing to open-source projects"
 layout: post
 ---
 

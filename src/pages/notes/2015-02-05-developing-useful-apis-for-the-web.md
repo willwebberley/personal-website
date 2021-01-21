@@ -3,6 +3,7 @@ year: 2015
 month: 2
 day: 5
 title: Developing Useful APIs for the Web
+description: "Internal seminar on developing useful and effective web APIs"
 layout: post
 ---
 

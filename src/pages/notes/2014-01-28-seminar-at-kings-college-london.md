@@ -3,6 +3,7 @@ year: 2014
 month: 1
 day: 28
 title: Seminar at King's College London
+description: "Giving a seminar on my research at KCL"
 layout: post
 ---
 

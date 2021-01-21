@@ -3,6 +3,7 @@ year: 2013
 month: 5
 day: 26
 title: Gower Tides Open-Sourced
+description: "Open-sourcing Gower Tides Android app"
 layout: post
 ---
 

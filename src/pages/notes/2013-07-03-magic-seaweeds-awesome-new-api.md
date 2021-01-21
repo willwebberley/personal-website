@@ -3,6 +3,7 @@ year: 2013
 month: 7
 day: 3
 title: Magic Seaweed's Awesome New API
+description: "Making use of the Magic Seaweed web API for surf data"
 layout: post
 ---
 

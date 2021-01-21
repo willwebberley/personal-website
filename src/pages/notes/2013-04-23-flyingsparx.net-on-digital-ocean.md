@@ -3,6 +3,7 @@ year: 2013
 month: 4
 day: 23
 title: flyingsparx.net On Digital Ocean
+description: "Deploying my personal website to Digital Ocean"
 layout: post
 ---
 

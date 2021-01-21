@@ -3,6 +3,7 @@ year: 2020
 month: 10
 day: 10
 title: "JS Tidbit: Optional Chaining"
+description: "Using the optional chaining JavaScript operator to improve code conciseness."
 ---
 
 JavaScript has lots of handy tools for creating concise code and one-liners. One such tool is the optional chaining operator.

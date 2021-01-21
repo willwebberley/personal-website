@@ -1,5 +1,6 @@
 ---
 title: CENode in IoT
+description: "Explaining how CENode can be used around the home and for interacting with IoT devices"
 layout: post
 ---
 

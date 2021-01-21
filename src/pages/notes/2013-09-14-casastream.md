@@ -3,6 +3,7 @@ year: 2013
 month: 9
 day: 14
 title: CasaStream
+description: "Discussing a solution for multi-room synchronous audio playback"
 layout: post
 ---
 

@@ -10,7 +10,9 @@ export default class Blog extends React.Component {
   render() {
     return (
       <Layout>
-        <Helmet title='Notes' />
+        <Helmet title='Notes'>
+          <meta name="description" content="Blog post entries and notes" />
+        </Helmet>
         <h2 style={{fontFamily:'Courier, Monospace'}}><Link to='/'>~/</Link>notes</h2>
 
         {this.props.data.allMarkdownRemark.edges.map(({ node }) => {
